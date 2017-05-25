@@ -23,6 +23,22 @@ class Player extends Component {
     }
   }
 
+  getSamplesForCategory = (category) => {
+    if (category === 'All') {
+      return this.state.samples
+    }
+
+    let filteredSamples = []
+
+    this.state.samples.map((sample) => {
+      if (sample.startsWith(category)) {
+        filteredSamples.push(sample)
+      }
+    })
+
+    return filteredSamples
+  }
+
   loopCheckboxClickHandler = () => {
     this.setState({
       isLooping: !this.state.isLooping,
@@ -38,8 +54,12 @@ class Player extends Component {
   }
 
   categorySelectorChangeHandler = (category) => {
+    let filteredSamples = this.getSamplesForCategory(category)
+
     this.setState({
       currentCategory: category,
+      currentSample:   filteredSamples[0],
+      filteredSamples: filteredSamples,
       isPlaying:       false,
     })
   }
