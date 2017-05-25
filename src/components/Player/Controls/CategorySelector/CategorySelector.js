@@ -36,7 +36,7 @@ class CategorySelector extends Component {
 CategorySelector.propTypes = {
   categories:                    PropTypes.array.isRequired,
   categorySelectorChangeHandler: PropTypes.func.isRequired,
-  currentCategory:               PropTypes.string.isRequired,
+  currentCategory:               PropTypes.string,
 }
 
 export default CategorySelector

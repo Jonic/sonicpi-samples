@@ -39,7 +39,7 @@ class Controls extends Component {
 Controls.propTypes = {
   categories:                    PropTypes.array.isRequired,
   categorySelectorChangeHandler: PropTypes.func.isRequired,
-  currentCategory:               PropTypes.string.isRequired,
+  currentCategory:               PropTypes.string,
   currentSample:                 PropTypes.string.isRequired,
   filteredSamples:               PropTypes.array.isRequired,
   isPlaying:                     PropTypes.bool.isRequired,
