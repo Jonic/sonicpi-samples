@@ -1,16 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import SampleOption from './SampleOption/SampleOption'
-
 class SampleSelector extends Component {
-  constructor(props) {
-    super(props)
-
-    this.handleChange = this.handleChange.bind(this)
-  }
-
-  handleChange(event) {
+  handleSampleChange = (event) => {
     this.props.sampleSelectorChangeHandler(event.target.value)
   }
 
@@ -20,15 +12,17 @@ class SampleSelector extends Component {
         <select
           className="c-SampleSelector__dropdown"
           value={this.props.currentSample}
-          onChange={this.handleChange}
+          onChange={this.handleSampleChange}
         >
           {
-            this.props.samples.map((sample, index) => {
+            this.props.filteredSamples.map((sample, index) => {
               return (
-                <SampleOption
+                <option
                   key={index}
                   sample={sample}
-                />
+                >
+                  {sample}
+                </option>
               )
             })
           }
@@ -40,8 +34,8 @@ class SampleSelector extends Component {
 
 SampleSelector.propTypes = {
   currentSample:               PropTypes.string.isRequired,
+  filteredSamples:             PropTypes.array.isRequired,
   sampleSelectorChangeHandler: PropTypes.func.isRequired,
-  samples:                     PropTypes.array.isRequired,
 }
 
 export default SampleSelector

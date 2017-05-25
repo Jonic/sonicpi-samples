@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import categories from './_config/categories'
 import samples from './_config/samples'
 
 import Audio from './Audio/Audio'
@@ -12,10 +13,13 @@ class Player extends Component {
     super(props)
 
     this.state = {
-      currentSample: samples[0],
-      isLooping:     false,
-      isPlaying:     false,
-      samples:       samples,
+      categories:      categories,
+      currentCategory: null,
+      currentSample:   samples[0],
+      filteredSamples: samples,
+      isLooping:       false,
+      isPlaying:       false,
+      samples:         samples,
     }
   }
 
@@ -31,6 +35,13 @@ class Player extends Component {
 
   sampleEndedHandler = () => {
     this.setIsPlayingStateTo(false)
+  }
+
+  categorySelectorChangeHandler = (category) => {
+    this.setState({
+      currentCategory: category,
+      isPlaying:       false,
+    })
   }
 
   sampleSelectorChangeHandler = (sample) => {
@@ -54,6 +65,7 @@ class Player extends Component {
     return (
       <div className="c-Player">
         <Debug
+          currentCategory={this.state.currentCategory}
           currentSample={this.state.currentSample}
           isLooping={this.state.isLooping}
           isPlaying={this.state.isPlaying}
@@ -67,13 +79,16 @@ class Player extends Component {
         />
 
         <Controls
+          categories={this.state.categories}
+          categorySelectorChangeHandler={this.categorySelectorChangeHandler}
+          currentCategory={this.state.currentCategory}
           currentSample={this.state.currentSample}
+          filteredSamples={this.state.filteredSamples}
           isLooping={this.state.isLooping}
           isPlaying={this.state.isPlaying}
           loopCheckboxClickHandler={this.loopCheckboxClickHandler}
           playStopClickHandler={this.playStopClickHandler}
           sampleSelectorChangeHandler={this.sampleSelectorChangeHandler}
-          samples={this.state.samples}
         />
 
         <Visualizer

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import CategorySelector from './CategorySelector/CategorySelector'
 import PlayStop from './PlayStop/PlayStop'
 import LoopCheckbox from './LoopCheckbox/LoopCheckbox'
 import SampleSelector from './SampleSelector/SampleSelector'
@@ -19,10 +20,16 @@ class Controls extends Component {
           loopCheckboxClickHandler={this.props.loopCheckboxClickHandler}
         />
 
+        <CategorySelector
+          categories={this.props.categories}
+          categorySelectorChangeHandler={this.props.categorySelectorChangeHandler}
+          currentCategory={this.props.currentCategory}
+        />
+
         <SampleSelector
           currentSample={this.props.currentSample}
           sampleSelectorChangeHandler={this.props.sampleSelectorChangeHandler}
-          samples={this.props.samples}
+          filteredSamples={this.props.filteredSamples}
         />
       </div>
     )
@@ -30,13 +37,16 @@ class Controls extends Component {
 }
 
 Controls.propTypes = {
-  currentSample:               PropTypes.string.isRequired,
-  isPlaying:                   PropTypes.bool.isRequired,
-  isLooping:                   PropTypes.bool.isRequired,
-  loopCheckboxClickHandler:    PropTypes.func.isRequired,
-  playStopClickHandler:        PropTypes.func.isRequired,
-  sampleSelectorChangeHandler: PropTypes.func.isRequired,
-  samples:                     PropTypes.array.isRequired,
+  categories:                    PropTypes.array.isRequired,
+  categorySelectorChangeHandler: PropTypes.func.isRequired,
+  currentCategory:               PropTypes.string.isRequired,
+  currentSample:                 PropTypes.string.isRequired,
+  filteredSamples:               PropTypes.array.isRequired,
+  isPlaying:                     PropTypes.bool.isRequired,
+  isLooping:                     PropTypes.bool.isRequired,
+  loopCheckboxClickHandler:      PropTypes.func.isRequired,
+  playStopClickHandler:          PropTypes.func.isRequired,
+  sampleSelectorChangeHandler:   PropTypes.func.isRequired,
 }
 
 export default Controls
