@@ -14,7 +14,6 @@ class CategorySelector extends Component {
           value={this.props.currentCategory}
           onChange={this.handleCategoryChange}
         >
-          <option value={null}>All</option>
           {
             this.props.categories.map((category, index) => {
               return (
@@ -36,7 +35,7 @@ class CategorySelector extends Component {
 CategorySelector.propTypes = {
   categories:                    PropTypes.array.isRequired,
   categorySelectorChangeHandler: PropTypes.func.isRequired,
-  currentCategory:               PropTypes.string,
+  currentCategory:               PropTypes.string.isRequired,
 }
 
 export default CategorySelector

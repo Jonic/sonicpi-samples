@@ -19,7 +19,7 @@ class Debug extends Component {
 }
 
 Debug.propTypes = {
-  currentCategory: PropTypes.string,
+  currentCategory: PropTypes.string.isRequired,
   currentSample:   PropTypes.string.isRequired,
   isLooping:       PropTypes.bool.isRequired,
   isPlaying:       PropTypes.bool.isRequired,

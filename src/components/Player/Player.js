@@ -14,7 +14,7 @@ class Player extends Component {
 
     this.state = {
       categories:      categories,
-      currentCategory: null,
+      currentCategory: categories[0],
       currentSample:   samples[0],
       filteredSamples: samples,
       isLooping:       false,
@@ -24,7 +24,7 @@ class Player extends Component {
   }
 
   getSamplesForCategory = (category) => {
-    if (category === 'All') {
+    if (category === 'all') {
       return this.state.samples
     }
 
@@ -34,6 +34,8 @@ class Player extends Component {
       if (sample.startsWith(category)) {
         filteredSamples.push(sample)
       }
+
+      return null
     })
 
     return filteredSamples
