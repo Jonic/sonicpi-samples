@@ -6,10 +6,6 @@ class Audio extends Component {
     this.setPlayingState()
   }
 
-  componentWillUnmount() {
-    this.audioElement.stop()
-  }
-
   audioSource = () => {
     return `${process.env.PUBLIC_URL}/assets/audio/${this.props.currentSample}.mp3`
   }
@@ -28,8 +24,13 @@ class Audio extends Component {
 
   setPlayingState = () => {
     if (this.props.isPlaying) {
-      this.audioElement.play()
+      return this.audioElement.play()
     }
+
+    this.audioElement.pause()
+    this.audioElement.currentTime = 0
+
+    return null
   }
 
   render() {
