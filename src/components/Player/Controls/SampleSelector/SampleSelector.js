@@ -19,7 +19,7 @@ class SampleSelector extends Component {
               return (
                 <option
                   key={index}
-                  sample={sample}
+                  value={sample}
                 >
                   {sample}
                 </option>
