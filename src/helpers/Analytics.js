@@ -6,16 +6,11 @@ const trackPageView = () => {
   console.log('trackPageView')
 }
 
-const trackPlay = () => {
+const trackPlay = (sample) => {
   console.log('trackPlay')
-}
-
-const trackPlayBySample = (sample) => {
-  console.log('trackPlayBySample')
 }
 
 export {
   trackPageView,
   trackPlay,
-  trackPlayBySample,
 }

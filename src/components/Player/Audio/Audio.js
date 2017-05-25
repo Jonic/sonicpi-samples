@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import {
-  trackPlay,
-  trackPlayBySample,
-} from '../../../helpers/Analytics'
+import { trackPlay } from '../../../helpers/Analytics'
 
 class Audio extends Component {
   componentDidUpdate() {
@@ -29,6 +26,7 @@ class Audio extends Component {
 
   setPlayingState = () => {
     if (this.props.isPlaying) {
+      trackPlay(this.props.currentSample)
       return this.audioElement.play()
     }
 
