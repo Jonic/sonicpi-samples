@@ -87,18 +87,14 @@ class Player extends Component {
   render() {
     return (
       <div className="c-Player">
+        <h1>Sonic Pi Samples</h1>
+
         <Debug
           currentCategory={this.state.currentCategory}
           currentSample={this.state.currentSample}
+          isLoading={this.props.isLoading}
           isLooping={this.state.isLooping}
           isPlaying={this.state.isPlaying}
-        />
-
-        <Audio
-          currentSample={this.state.currentSample}
-          isLooping={this.state.isLooping}
-          isPlaying={this.state.isPlaying}
-          sampleEndedHandler={this.sampleEndedHandler}
         />
 
         <Controls
@@ -107,6 +103,7 @@ class Player extends Component {
           currentCategory={this.state.currentCategory}
           currentSample={this.state.currentSample}
           filteredSamples={this.state.filteredSamples}
+          isLoading={this.props.isLoading}
           isLooping={this.state.isLooping}
           isPlaying={this.state.isPlaying}
           loopCheckboxClickHandler={this.loopCheckboxClickHandler}
@@ -114,7 +111,17 @@ class Player extends Component {
           sampleSelectorChangeHandler={this.sampleSelectorChangeHandler}
         />
 
+        <Audio
+          currentSample={this.state.currentSample}
+          isLooping={this.state.isLooping}
+          isPlaying={this.state.isPlaying}
+          sampleEndedHandler={this.sampleEndedHandler}
+          updateAudioSource={this.updateAudioSource}
+          updateIsLoading={this.props.updateIsLoading}
+        />
+
         <Visualizer
+          audioSource={this.audioSource}
           isPlaying={this.state.isPlaying}
         />
       </div>

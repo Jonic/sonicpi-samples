@@ -16,6 +16,7 @@ class PlayStop extends Component {
         <button
           className="c-PlayStop__button"
           onClick={this.handleClick}
+          disabled={this.props.isLoading}
         >
           {this.determineLabel()}
         </button>
@@ -25,6 +26,7 @@ class PlayStop extends Component {
 }
 
 PlayStop.propTypes = {
+  isLoading:            PropTypes.bool.isRequired,
   isPlaying:            PropTypes.bool.isRequired,
   playStopClickHandler: PropTypes.func.isRequired,
 }

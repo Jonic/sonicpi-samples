@@ -9,8 +9,10 @@ class CategorySelector extends Component {
   render() {
     return (
       <div className="c-CategorySelector">
+        Category Selector:
         <select
           className="c-CategorySelector__dropdown"
+          disabled={this.props.isLoading}
           value={this.props.currentCategory}
           onChange={this.handleCategoryChange}
         >
@@ -36,6 +38,7 @@ CategorySelector.propTypes = {
   categories:                    PropTypes.array.isRequired,
   categorySelectorChangeHandler: PropTypes.func.isRequired,
   currentCategory:               PropTypes.string.isRequired,
+  isLoading:                     PropTypes.bool.isRequired,
 }
 
 export default CategorySelector

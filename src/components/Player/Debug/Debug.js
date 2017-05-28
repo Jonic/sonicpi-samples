@@ -5,13 +5,11 @@ class Debug extends Component {
   render() {
     return (
       <div className="c-Debug">
-        <h1>Sonic Pi Samples</h1>
-
-        <ul>
-          <li>currentCategory: {this.props.currentCategory}</li>
-          <li>currentSample: {this.props.currentSample}</li>
-          <li>isLooping: {this.props.isLooping.toString()}</li>
-          <li>isPlaying: {this.props.isPlaying.toString()}</li>
+        <ul className="c-Debug__list">
+          <li className="c-Debug__list-item">currentCategory: {this.props.currentCategory}</li>
+          <li className="c-Debug__list-item">currentSample: {this.props.currentSample}</li>
+          <li className="c-Debug__list-item">isLooping: {this.props.isLooping.toString()}</li>
+          <li className="c-Debug__list-item">isPlaying: {this.props.isPlaying.toString()}</li>
         </ul>
       </div>
     )

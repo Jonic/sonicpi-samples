@@ -17,11 +17,13 @@ class LoopCheckbox extends Component {
   render() {
     return (
       <div className="c-LoopCheckbox">
+        Loop Sample:
         <input
-          type="checkbox"
-          className="c-LoopCheckbox__input"
-          onClick={this.handleClick}
           checked={this.determineChecked()}
+          className="c-LoopCheckbox__input"
+          disabled={this.props.isLoading}
+          onClick={this.handleClick}
+          type="checkbox"
         />
       </div>
     )
@@ -29,6 +31,7 @@ class LoopCheckbox extends Component {
 }
 
 LoopCheckbox.propTypes = {
+  isLoading:                PropTypes.bool.isRequired,
   isLooping:                PropTypes.bool.isRequired,
   loopCheckboxClickHandler: PropTypes.func.isRequired,
 }

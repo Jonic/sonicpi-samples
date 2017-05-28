@@ -10,26 +10,30 @@ class Controls extends Component {
   render() {
     return (
       <div className="c-Controls">
-        <PlayStop
-          isPlaying={this.props.isPlaying}
-          playStopClickHandler= {this.props.playStopClickHandler}
-        />
-
-        <LoopCheckbox
-          isLooping={this.props.isLooping}
-          loopCheckboxClickHandler={this.props.loopCheckboxClickHandler}
-        />
-
         <CategorySelector
           categories={this.props.categories}
           categorySelectorChangeHandler={this.props.categorySelectorChangeHandler}
           currentCategory={this.props.currentCategory}
+          isLoading={this.props.isLoading}
         />
 
         <SampleSelector
           currentSample={this.props.currentSample}
-          sampleSelectorChangeHandler={this.props.sampleSelectorChangeHandler}
           filteredSamples={this.props.filteredSamples}
+          isLoading={this.props.isLoading}
+          sampleSelectorChangeHandler={this.props.sampleSelectorChangeHandler}
+        />
+
+        <LoopCheckbox
+          isLoading={this.props.isLoading}
+          isLooping={this.props.isLooping}
+          loopCheckboxClickHandler={this.props.loopCheckboxClickHandler}
+        />
+
+        <PlayStop
+          isLoading={this.props.isLoading}
+          isPlaying={this.props.isPlaying}
+          playStopClickHandler= {this.props.playStopClickHandler}
         />
       </div>
     )
@@ -42,8 +46,9 @@ Controls.propTypes = {
   currentCategory:               PropTypes.string.isRequired,
   currentSample:                 PropTypes.string.isRequired,
   filteredSamples:               PropTypes.array.isRequired,
-  isPlaying:                     PropTypes.bool.isRequired,
+  isLoading:                     PropTypes.bool.isRequired,
   isLooping:                     PropTypes.bool.isRequired,
+  isPlaying:                     PropTypes.bool.isRequired,
   loopCheckboxClickHandler:      PropTypes.func.isRequired,
   playStopClickHandler:          PropTypes.func.isRequired,
   sampleSelectorChangeHandler:   PropTypes.func.isRequired,
