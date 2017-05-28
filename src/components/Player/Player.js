@@ -14,6 +14,7 @@ class Player extends Component {
     super(props)
 
     this.state = {
+      audioSource:     null,
       categories:      categories,
       currentCategory: categories[0],
       currentSample:   samples[0],
@@ -82,6 +83,12 @@ class Player extends Component {
 
   toggleIsPlayingState = () => {
     this.setIsPlayingStateTo(!this.state.isPlaying)
+  }
+
+  updateAudioSource = (audioSource) => {
+    this.setState({
+      audioSource: audioSource,
+    })
   }
 
   render() {
