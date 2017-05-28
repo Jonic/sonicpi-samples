@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import categories from './_config/categories'
 import samples from './_config/samples'
@@ -119,6 +120,11 @@ class Player extends Component {
       </div>
     )
   }
+}
+
+Player.propTypes = {
+  isLoading:       PropTypes.bool.isRequired,
+  updateIsLoading: PropTypes.func.isRequired,
 }
 
 export default Player
