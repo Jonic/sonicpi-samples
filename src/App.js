@@ -10,6 +10,11 @@ class App extends Component {
     }
   }
 
+  toggleIsLoading = () => {
+    let newState = !this.state.isLoading
+    this.updateIsLoading(newState)
+  }
+
   updateIsLoading = (newState) => {
     this.setState({
       isLoading: newState,
@@ -17,12 +22,11 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <Player
-        isLoading={this.state.isLoading}
-        updateIsLoading={this.updateIsLoading}
-      />
-    )
+    return <Player
+      isLoading={this.state.isLoading}
+      toggleIsLoading={this.toggleIsLoading}
+      updateIsLoading={this.updateIsLoading}
+    />
   }
 }
 
