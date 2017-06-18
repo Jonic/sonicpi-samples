@@ -14,7 +14,6 @@ class Player extends Component {
     super(props)
 
     this.state = {
-      audioSource:     null,
       categories:      categories,
       currentCategory: categories[0],
       currentSample:   samples[0],
@@ -22,6 +21,7 @@ class Player extends Component {
       isLooping:       false,
       isPlaying:       false,
       samples:         samples,
+      visData:         null,
     }
   }
 
@@ -53,10 +53,6 @@ class Player extends Component {
     this.toggleIsPlayingState()
   }
 
-  sampleEndedHandler = () => {
-    this.setIsPlayingStateTo(false)
-  }
-
   categorySelectorChangeHandler = (category) => {
     let filteredSamples = this.getSamplesForCategory(category)
 
@@ -66,6 +62,10 @@ class Player extends Component {
       filteredSamples: filteredSamples,
       isPlaying:       false,
     })
+  }
+
+  sampleEndedHandler = () => {
+    this.setIsPlayingStateTo(false)
   }
 
   sampleSelectorChangeHandler = (sample) => {
@@ -85,9 +85,9 @@ class Player extends Component {
     this.setIsPlayingStateTo(!this.state.isPlaying)
   }
 
-  updateAudioSource = (audioSource) => {
+  updateVisData = visData => {
     this.setState({
-      audioSource: audioSource,
+      visData: visData,
     })
   }
 
@@ -123,13 +123,13 @@ class Player extends Component {
           isLooping={this.state.isLooping}
           isPlaying={this.state.isPlaying}
           sampleEndedHandler={this.sampleEndedHandler}
-          updateAudioSource={this.updateAudioSource}
           updateIsLoading={this.props.updateIsLoading}
+          updateVisData={this.updateVisData}
         />
 
         <Visualizer
-          audioSource={this.audioSource}
           isPlaying={this.state.isPlaying}
+          visData={this.state.visData}
         />
       </div>
     )

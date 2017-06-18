@@ -5,13 +5,14 @@ class Visualizer extends Component {
   render() {
     return (
       <div className="c-Visualizer">
-        Visualizer
+        {this.props.visData}
       </div>
     )
   }
 }
 
 Visualizer.propTypes = {
+  visData:   PropTypes.object,
   isPlaying: PropTypes.bool.isRequired,
 }
 
