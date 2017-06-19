@@ -26,17 +26,17 @@ class Visualizer extends Component {
   componentDidUpdate = () => {
     this.canvas.width = this.canvas.width
 
-    let barWidth = this.state.width / this.props.bufferLength * 2.5
+    let barWidth = this.state.width / this.props.bufferLength * 2
     let barHeight
     let x = 0
 
     for (let i = 0; i < this.props.bufferLength; i += 1) {
-      barHeight = this.props.visData[i]
+      barHeight = this.state.height / 100 * this.props.visData[i]
 
-      this.context.fillStyle = `rgb(${barHeight + 100}, 50, 50)`
+      this.context.fillStyle = `rgb(${barHeight + 100}, 127, ${255 - (barHeight - 100)})`
       this.context.fillRect(x, this.state.height - barHeight, barWidth, barHeight)
 
-      x += barWidth + 1
+      x += barWidth
     }
   }
 
