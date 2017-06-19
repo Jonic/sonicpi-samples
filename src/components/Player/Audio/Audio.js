@@ -12,10 +12,12 @@ class Audio extends Component {
     this.source.connect(this.analyser)
     this.source.connect(this.context.destination)
 
-    this.analyser.fftSize = 2048
-    this.frequencyData = new Uint8Array(this.analyser.frequencyBinCount)
+    this.analyser.fftSize = 128
+    this.bufferLength = this.analyser.frequencyBinCount
+    this.frequencyData = new Uint8Array(this.bufferLength)
 
     this.setPlayingState()
+    this.props.updateBufferLength(this.bufferLength)
 
     this.renderVisualiserFrame()
   }
@@ -38,25 +40,32 @@ class Audio extends Component {
     return `${process.env.PUBLIC_URL}/assets/audio/${this.props.currentSample}.mp3`
   }
 
-  sampleEnded = () => {
-    this.props.sampleEndedHandler()
-  }
-
-  setPlayingState = () => {
-    if (this.props.isPlaying) {
-      trackPlay()
-      this.audioElement.play()
-      return
-    }
-
-    this.audioElement.pause()
-    this.audioElement.currentTime = 0
+  play = () => {
+    trackPlay()
+    this.audioElement.play()
   }
 
   renderVisualiserFrame = () => {
     window.requestAnimationFrame(this.renderVisualiserFrame)
     this.analyser.getByteFrequencyData(this.frequencyData)
     this.props.updateVisData(this.frequencyData)
+  }
+
+  sampleEnded = () => {
+    this.props.sampleEndedHandler()
+  }
+
+  setPlayingState = () => {
+    if (this.props.isPlaying) {
+      this.play()
+    } else {
+      this.stop()
+    }
+  }
+
+  stop = () => {
+    this.audioElement.pause()
+    this.audioElement.currentTime = 0
   }
 
   render() {
@@ -83,6 +92,7 @@ Audio.propTypes = {
   isPlaying:          PropTypes.bool.isRequired,
   sampleEndedHandler: PropTypes.func.isRequired,
   updateIsLoading:    PropTypes.func.isRequired,
+  updateBufferLength: PropTypes.func.isRequired,
   updateVisData:      PropTypes.func.isRequired,
 }
 

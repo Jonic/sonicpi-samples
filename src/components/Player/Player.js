@@ -14,6 +14,7 @@ class Player extends Component {
     super(props)
 
     this.state = {
+      bufferLength:    0,
       categories:      categories,
       currentCategory: categories[0],
       currentSample:   samples[0],
@@ -25,14 +26,14 @@ class Player extends Component {
     }
   }
 
-  getSamplesForCategory = (category) => {
+  getSamplesForCategory = category => {
     if (category === 'all') {
       return this.state.samples
     }
 
     let filteredSamples = []
 
-    this.state.samples.map((sample) => {
+    this.state.samples.map(sample => {
       if (sample.startsWith(category)) {
         filteredSamples.push(sample)
       }
@@ -53,7 +54,7 @@ class Player extends Component {
     this.toggleIsPlayingState()
   }
 
-  categorySelectorChangeHandler = (category) => {
+  categorySelectorChangeHandler = category => {
     let filteredSamples = this.getSamplesForCategory(category)
 
     this.setState({
@@ -68,14 +69,14 @@ class Player extends Component {
     this.setIsPlayingStateTo(false)
   }
 
-  sampleSelectorChangeHandler = (sample) => {
+  sampleSelectorChangeHandler = sample => {
     this.setState({
       currentSample: sample,
       isPlaying:     false,
     })
   }
 
-  setIsPlayingStateTo = (newState) => {
+  setIsPlayingStateTo = newState => {
     this.setState({
       isPlaying: newState,
     })
@@ -83,6 +84,12 @@ class Player extends Component {
 
   toggleIsPlayingState = () => {
     this.setIsPlayingStateTo(!this.state.isPlaying)
+  }
+
+  updateBufferLength = bufferLength => {
+    this.setState({
+      bufferLength: bufferLength,
+    })
   }
 
   updateVisData = visData => {
@@ -124,10 +131,12 @@ class Player extends Component {
           isPlaying={this.state.isPlaying}
           sampleEndedHandler={this.sampleEndedHandler}
           updateIsLoading={this.props.updateIsLoading}
+          updateBufferLength={this.updateBufferLength}
           updateVisData={this.updateVisData}
         />
 
         <Visualizer
+          bufferLength={this.state.bufferLength}
           isPlaying={this.state.isPlaying}
           visData={this.state.visData}
         />
