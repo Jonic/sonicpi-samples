@@ -11,7 +11,7 @@ const trackPlay = sample => {
   ReactGA.event({
     category: 'Audio',
     action:   'Sample Played',
-    value:    sample,
+    label:    sample,
   })
 }
 
