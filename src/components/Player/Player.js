@@ -6,8 +6,8 @@ import samples from './_config/samples'
 
 import Audio from './Audio/Audio'
 import Controls from './Controls/Controls'
-import Debug from './Debug/Debug'
-import Visualizer from './Visualizer/Visualizer'
+// import Debug from './Debug/Debug'
+// import Visualizer from './Visualizer/Visualizer'
 
 class Player extends Component {
   constructor(props) {
