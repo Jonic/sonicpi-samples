@@ -5,7 +5,13 @@ import { trackPlay } from '../../../helpers/Analytics'
 
 class Audio extends Component {
   componentDidMount() {
-    this.context = new AudioContext()
+    try {
+      window.AudioContext = window.AudioContext || window.webkitAudioContext
+      this.context = new window.AudioContext()
+    } catch (e) {
+      console.log('No Web Audio API support') // eslint-disable-line no-console
+    }
+
     this.source = this.context.createMediaElementSource(this.audioElement)
     this.analyser = this.context.createAnalyser()
 
