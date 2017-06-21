@@ -24,6 +24,10 @@ class Visualizer extends Component {
   }
 
   componentDidUpdate = () => {
+    if (!this.props.visData) {
+      return
+    }
+
     this.canvas.width = this.canvas.width
 
     let barWidth = this.state.width / this.props.bufferLength * 2
