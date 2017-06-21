@@ -19,7 +19,7 @@ class Audio extends Component {
     this.setPlayingState()
     this.props.updateBufferLength(this.bufferLength)
 
-    this.renderVisualiserFrame()
+    window.requestAnimationFrame(this.renderVisualiserFrame)
   }
 
   componentDidUpdate() {
@@ -73,7 +73,7 @@ class Audio extends Component {
       <div className="c-Audio">
         <audio
           className="c-Audio__element"
-          controls
+          // controls
           loop={this.props.isLooping}
           onEnded={this.sampleEnded}
           ref={audioElement => {
