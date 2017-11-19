@@ -24,13 +24,19 @@ class App extends Component {
   }
 
   render() {
-    return <div className="c-App">
-      <Player
-        isLoading={this.state.isLoading}
-        toggleIsLoading={this.toggleIsLoading}
-        updateIsLoading={this.updateIsLoading}
-      />
-    </div>
+    return (
+      <div className="c-App">
+        <h1 className="c-App__title">
+          Sonic Pi Samples
+        </h1>
+
+        <Player
+          isLoading={this.state.isLoading}
+          toggleIsLoading={this.toggleIsLoading}
+          updateIsLoading={this.updateIsLoading}
+        />
+      </div>
+    )
   }
 }
 

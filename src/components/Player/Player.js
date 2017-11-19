@@ -103,8 +103,6 @@ class Player extends Component {
   render() {
     return (
       <div className="c-Player">
-        <h1>Sonic Pi Samples</h1>
-
         <Debug
           currentCategory={this.state.currentCategory}
           currentSample={this.state.currentSample}
