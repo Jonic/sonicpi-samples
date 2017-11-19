@@ -1,35 +1,37 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
 
 import './LoopCheckbox.css'
 
-class LoopCheckbox extends Component {
-  determineChecked = () => {
-    if (this.props.isLooping) {
+const LoopCheckbox = ({
+  isLoading,
+  isLooping,
+  loopCheckboxClickHandler,
+}) => {
+  const determineChecked = () => {
+    if (isLooping) {
       return 'checked'
     }
 
     return false
   }
 
-  handleClick = () => {
-    this.props.loopCheckboxClickHandler()
+  const handleClick = () => {
+    loopCheckboxClickHandler()
   }
 
-  render() {
-    return (
-      <div className="c-LoopCheckbox">
-        Loop Sample:
-        <input
-          checked={this.determineChecked()}
-          className="c-LoopCheckbox__input"
-          disabled={this.props.isLoading}
-          onClick={this.handleClick}
-          type="checkbox"
-        />
-      </div>
-    )
-  }
+  return (
+    <div className="c-LoopCheckbox">
+      Loop Sample:
+      <input
+        checked={determineChecked()}
+        className="c-LoopCheckbox__input"
+        disabled={isLoading}
+        onClick={handleClick}
+        type="checkbox"
+      />
+    </div>
+  )
 }
 
 LoopCheckbox.propTypes = {
