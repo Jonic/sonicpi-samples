@@ -1,0 +1,16 @@
+$iota-objs-media-aligned:           true;
+$iota-objs-media-rev:               false;
+$iota-objs-media-gutter-default:    $iota-global-gutter-default;
+$iota-objs-media-gutter-extra:      ();
+$iota-objs-media-flex:              $iota-global-flex;
+$iota-objs-media-res:               true;
+$iota-objs-media-collapse-at:       $breakpoint-sm - 1;
+$iota-objs-media-namespace:         'media';
+$iota-objs-media-fixed-name:        'fixed';
+$iota-objs-media-fluid-name:        'fluid';
+$iota-objs-media-reversed-name:     'rev';
+$iota-objs-media-align-middle-name: 'middle';
+$iota-objs-media-align-bottom-name: 'bottom';
+$iota-objs-media-responsive-name:   'res';
+
+@import 'node_modules/iotacss/objects/media';

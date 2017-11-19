@@ -1,0 +1,13 @@
+$iota-utils-padding-default:         $iota-global-gutter-default;
+$iota-utils-padding-extra:           map-merge($spacing-extra, $type-margins);
+$iota-utils-padding-res:             true;
+$iota-utils-padding-breakpoints:     $iota-global-breakpoints;
+$iota-utils-padding-namespace:       'p';
+$iota-utils-padding-top-name:        't';
+$iota-utils-padding-right-name:      'r';
+$iota-utils-padding-bottom-name:     'b';
+$iota-utils-padding-left-name:       'l';
+$iota-utils-padding-vertical-name:   'v';
+$iota-utils-padding-horizontal-name: 'h';
+
+@import 'node_modules/iotacss/utilities/padding';

@@ -1,0 +1,14 @@
+$border-radius:    $baseline;
+$border-width:     .1rem;
+$border-width-x2:  $border-width * 2;
+$border-width-x3:  $border-width * 3;
+
+/*                 tl             tr             br             bl           */
+$border-radius-b:  0              0              $border-radius $border-radius;
+$border-radius-bl: 0              0              0              $border-radius;
+$border-radius-br: 0              0              $border-radius 0;
+$border-radius-l:  $border-radius 0              0              $border-radius;
+$border-radius-r:  0              $border-radius $border-radius 0;
+$border-radius-t:  $border-radius $border-radius 0              0;
+$border-radius-tl: $border-radius 0              0              0;
+$border-radius-tr: 0              $border-radius 0              0;

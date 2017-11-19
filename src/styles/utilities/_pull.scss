@@ -1,0 +1,7 @@
+$iota-utils-pull-namespace:   'pull-';
+$iota-utils-pull-delimiter:   $iota-global-delimiter;
+$iota-utils-pull-columns:     $iota-global-columns;
+$iota-utils-pull-res:         true;
+$iota-utils-pull-breakpoints: $iota-global-breakpoints;
+
+@import 'node_modules/iotacss/utilities/pull';

@@ -1,0 +1,4 @@
+$iota-utils-weight-sizes:     map-merge($font-weights, $type-font-weights);
+$iota-utils-weight-namespace: 'weight-';
+
+@import 'node_modules/iotacss/utilities/weight';

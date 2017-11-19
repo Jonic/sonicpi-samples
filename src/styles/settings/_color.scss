@@ -1,0 +1,41 @@
+$color-black:                  #000;
+$color-white:                  #fff;
+
+$color-primary-yellow:      #ffb12a;
+$color-primary-orange:      #f68e3b;
+$color-primary-red:         #f3524f;
+$color-primary-violet:      #a76fba;
+$color-primary-navy:        #004881;
+$color-primary-blue:        #41a6c4;
+$color-primary-turquoise:   #10aeb0;
+$color-primary-green:       #53ce63;
+
+$color-ui-black:               #222;
+$color-ui-grey-dark:           #444;
+$color-ui-grey-medium:         #999;
+$color-ui-grey-light:          #ccc;
+$color-ui-grey-lightest:       #eee;
+$color-ui-white:            #f5f6f9;
+
+// scss-lint thinks the following "black" and "white" are color literals.
+// They're not, so disabling the rule.
+// scss-lint:disable ColorKeyword
+$colors: (
+  black:                    $color-black,
+  white:                    $color-white,
+  primary-yellow:           $color-primary-yellow,
+  primary-orange:           $color-primary-orange,
+  primary-red:              $color-primary-red,
+  primary-violet:           $color-primary-violet,
+  primary-navy:             $color-primary-navy,
+  primary-blue:             $color-primary-blue,
+  primary-turquoise:        $color-primary-turquoise,
+  primary-green:            $color-primary-green,
+  ui-black:                 $color-ui-black,
+  ui-grey-dark:             $color-ui-grey-dark,
+  ui-grey-medium:           $color-ui-grey-medium,
+  ui-grey-light:            $color-ui-grey-light,
+  ui-grey-lightest:         $color-ui-grey-lightest,
+  ui-white:                 $color-ui-white,
+);
+// scss-lint:enable ColorKeyword

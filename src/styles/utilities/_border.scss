@@ -1,0 +1,73 @@
+.u-border      { border-width:        $border-width;    }
+.u-border-x2   { border-width:        $border-width-x2; }
+.u-border-x3   { border-width:        $border-width-x3; }
+.u-border-b    { border-bottom-width: $border-width;    }
+.u-border-b-x2 { border-bottom-width: $border-width-x2; }
+.u-border-b-x3 { border-bottom-width: $border-width-x3; }
+.u-border-l    { border-left-width:   $border-width;    }
+.u-border-l-x2 { border-left-width:   $border-width-x2; }
+.u-border-l-x3 { border-left-width:   $border-width-x3; }
+.u-border-r    { border-right-width:  $border-width;    }
+.u-border-r-x2 { border-right-width:  $border-width-x2; }
+.u-border-r-x3 { border-right-width:  $border-width-x3; }
+.u-border-t    { border-top-width:    $border-width;    }
+.u-border-t-x2 { border-top-width:    $border-width-x2; }
+.u-border-t-x3 { border-top-width:    $border-width-x3; }
+
+.u-border-h {
+  border-left-width:  $border-width;
+  border-right-width: $border-width;
+}
+
+.u-border-h-x2 {
+  border-left-width:  $border-width-x2;
+  border-right-width: $border-width-x2;
+}
+
+.u-border-h-x3 {
+  border-left-width:  $border-width-x3;
+  border-right-width: $border-width-x3;
+}
+
+.u-border-v {
+  border-bottom-width: $border-width;
+  border-top-width:    $border-width;
+}
+
+.u-border-v-x2 {
+  border-bottom-width: $border-width-x2;
+  border-top-width:    $border-width-x2;
+}
+
+.u-border-v-x3 {
+  border-bottom-width: $border-width-x3;
+  border-top-width:    $border-width-x3;
+}
+
+.u-border-radius    { border-radius: $border-radius;    }
+.u-border-radius-b  { border-radius: $border-radius-b;  }
+.u-border-radius-bl { border-radius: $border-radius-bl; }
+.u-border-radius-br { border-radius: $border-radius-br; }
+.u-border-radius-l  { border-radius: $border-radius-l;  }
+.u-border-radius-r  { border-radius: $border-radius-r;  }
+.u-border-radius-t  { border-radius: $border-radius-t;  }
+.u-border-radius-tl { border-radius: $border-radius-tl; }
+.u-border-radius-tr { border-radius: $border-radius-tr; }
+
+@each $name, $value in $colors {
+  .u-border-color-#{$name}   { border-color:        $value; }
+  .u-border-color-b-#{$name} { border-bottom-color: $value; }
+  .u-border-color-l-#{$name} { border-left-color:   $value; }
+  .u-border-color-r-#{$name} { border-right-color:  $value; }
+  .u-border-color-t-#{$name} { border-top-color:    $value; }
+
+  .u-border-color-h-#{$name} {
+    border-left-color:  $value;
+    border-right-color: $value;
+  }
+
+  .u-border-color-v-#{$name} {
+    border-bottom-color: $value;
+    border-top-color:    $value;
+  }
+}

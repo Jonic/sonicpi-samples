@@ -1,0 +1,7 @@
+$iota-utils-size-delimiter: \/;
+$iota-utils-size-columns: $iota-global-columns;
+$iota-utils-size-res: true;
+$iota-utils-size-breakpoints: $iota-global-breakpoints;
+$iota-utils-size-namespace: '';
+
+@import 'node_modules/iotacss/utilities/size';

@@ -1,0 +1,14 @@
+$iota-objs-grid-aligned:           true;
+$iota-objs-grid-rev:               true;
+$iota-objs-grid-gutter-default:    $grid-gutters;
+$iota-objs-grid-gutter-extra:      ();
+$iota-objs-grid-flex:              $iota-global-flex;
+$iota-objs-grid-equal-height:      true;
+$iota-objs-grid-namespace:         'grid';
+$iota-objs-grid-column-name:       'col';
+$iota-objs-grid-align-right-name:  'right';
+$iota-objs-grid-align-center-name: 'center';
+$iota-objs-grid-align-top-name:    'top';
+$iota-objs-grid-namespace:         'grid';
+
+@import 'node_modules/iotacss/objects/grid';

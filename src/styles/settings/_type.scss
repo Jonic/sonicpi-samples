@@ -1,0 +1,69 @@
+$type-base-font-size:             1.6rem;
+$type-base-font-size-md:          1.8rem;
+$type-base-line-height:           1.5;
+
+$type-caption-font-size:          1.4rem;
+$type-caption-font-size-md:       1.6rem;
+$type-caption-line-height:        1.5;
+
+$type-sub-heading-font-size:      1.6rem;
+$type-sub-heading-font-size-md:   1.8rem;
+$type-sub-heading-line-height:    1.3;
+
+$type-heading-font-size:          2rem;
+$type-heading-font-size-md:       2.2rem;
+$type-heading-line-height:        1.3;
+
+$type-display-font-size:          2rem;
+$type-display-font-size-md:       2.8rem;
+$type-display-line-height:        1.3;
+
+$type-display-large-font-size:    2.4rem;
+$type-display-large-font-size-md: 3.6rem;
+$type-display-large-line-height:  1.2;
+
+/*
+scss-lint:disable SpaceAfterComma
+Type name
+| Breakpoints
+| |      Font size - relative to 10px on <html> element
+| |      |                                 Line height
+| |      |                                 |
+v v      v                                 v */
+$type-base: (
+  null: ($type-base-font-size,             $type-base-line-height),
+  md:   ($type-base-font-size-md,          $type-base-line-height));
+$type-caption: (
+  null: ($type-caption-font-size,          $type-base-line-height),
+  md:   ($type-caption-font-size-md,       $type-base-line-height));
+$type-sub-heading: (
+  null: ($type-sub-heading-font-size,      $type-base-line-height),
+  md:   ($type-sub-heading-font-size-md,   $type-base-line-height));
+$type-heading: (
+  null: ($type-heading-font-size,          $type-base-line-height),
+  md:   ($type-heading-font-size-md,       $type-base-line-height));
+$type-display: (
+  null: ($type-display-font-size,          $type-base-line-height),
+  md:   ($type-display-font-size-md,       $type-base-line-height));
+$type-display-large: (
+  null: ($type-display-large-font-size,    $type-base-line-height),
+  md:   ($type-display-large-font-size-md, $type-base-line-height));
+// scss-lint:enable SpaceAfterComma
+
+$type-margins: (
+  -base:          1em,
+  -caption:       1em,
+  -sub-heading:   1em,
+  -heading:       1em,
+  -display:       1em,
+  -display-large: 1em,
+);
+
+$type-font-weights: (
+  base:          $font-weight-light,
+  caption:       $font-weight-light,
+  sub-heading:   $font-weight-medium,
+  heading:       $font-weight-medium,
+  display:       $font-weight-medium,
+  display-large: $font-weight-bold,
+);

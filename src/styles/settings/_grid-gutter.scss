@@ -1,0 +1,13 @@
+$grid-gutter-base: $baseline * 4;
+$grid-gutter-sm:   4%;
+$grid-gutter-md:   4%;
+$grid-gutter-lg:   4%;
+$grid-gutter-xl:   4%;
+
+$grid-gutters: (
+  null: $grid-gutter-base,
+  sm:   $grid-gutter-sm,
+  md:   $grid-gutter-md,
+  lg:   $grid-gutter-lg,
+  xl:   $grid-gutter-xl,
+);
