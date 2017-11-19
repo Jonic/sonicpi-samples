@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+
+import './Player.css'
 
 import categories from '../../_config/categories'
 import samples from '../../_config/samples'

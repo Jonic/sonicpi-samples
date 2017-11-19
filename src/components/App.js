@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Player from './Player/Player'
 
+import './App.css'
+
 class App extends Component {
   constructor() {
     super()
@@ -22,11 +24,13 @@ class App extends Component {
   }
 
   render() {
-    return <Player
-      isLoading={this.state.isLoading}
-      toggleIsLoading={this.toggleIsLoading}
-      updateIsLoading={this.updateIsLoading}
-    />
+    return <div className="c-App">
+      <Player
+        isLoading={this.state.isLoading}
+        toggleIsLoading={this.toggleIsLoading}
+        updateIsLoading={this.updateIsLoading}
+      />
+    </div>
   }
 }
 

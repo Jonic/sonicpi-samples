@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+
+import './Debug.css'
 
 class Debug extends Component {
   render() {

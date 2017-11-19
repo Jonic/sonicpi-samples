@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+
+import './SampleSelector.css'
 
 class SampleSelector extends Component {
   handleSampleChange = (event) => {

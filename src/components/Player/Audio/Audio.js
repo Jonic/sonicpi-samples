@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+
+import './Audio.css'
 
 import config from '../../../_config/audio'
 import { trackPlay } from '../../../helpers/Analytics'
