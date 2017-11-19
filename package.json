@@ -9,8 +9,10 @@
     "eslint": "^4.11.0",
     "eslint-plugin-react": "^7.5.1",
     "gh-pages": "^1.1.0",
+    "iotacss": "^1.5.0",
     "jest": "^21.2.1",
     "jest-enzyme": "^4.0.1",
+    "node-sass-chokidar": "0.0.3",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-addons-test-utils": "^15.6.2",
@@ -18,14 +20,19 @@
     "react-ga": "^2.3.5",
     "react-scripts": "^1.0.17"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "npm-run-all": "^4.1.2"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "lint": "eslint src/. --ext .js; exit 0;",
-    "test": "react-scripts test --env=jsdom",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "build": "npm install --force && node-sass-chokidar src/ -o src/ && react-scripts build",
+    "deploy": "gh-pages -d build",
+    "dev": "npm-run-all -p watch-css start",
     "eject": "react-scripts eject",
+    "lint": "eslint src/. --ext .js; exit 0;",
     "predeploy": "rm -rf node_modules/gh-pages/.cache && yarn run build",
-    "deploy": "gh-pages -d build"
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   }
 }
