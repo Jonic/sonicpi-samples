@@ -1,39 +1,43 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
 
 import './SampleSelector.css'
 
-class SampleSelector extends Component {
-  handleSampleChange = (event) => {
-    this.props.sampleSelectorChangeHandler(event.target.value)
+const SampleSelector = ({
+  currentSample,
+  filteredSamples,
+  isLoading,
+  sampleSelectorChangeHandler,
+}) => {
+  const handleSampleChange = (event) => {
+    sampleSelectorChangeHandler(event.target.value)
   }
 
-  render() {
-    return (
-      <div className="c-SampleSelector">
-        Sample Selector:
-        <select
-          className="c-SampleSelector__dropdown"
-          disabled={this.props.isLoading}
-          value={this.props.currentSample}
-          onChange={this.handleSampleChange}
-        >
-          {
-            this.props.filteredSamples.map((sample, index) => {
-              return (
-                <option
-                  key={index}
-                  value={sample}
-                >
-                  {sample}
-                </option>
-              )
-            })
-          }
-        </select>
-      </div>
-    )
-  }
+  return (
+    <div className="c-SampleSelector">
+      Sample Selector:
+
+      <select
+        className="c-SampleSelector__dropdown"
+        disabled={isLoading}
+        value={currentSample}
+        onChange={handleSampleChange}
+      >
+        {
+          filteredSamples.map((sample, index) => {
+            return (
+              <option
+                key={index}
+                value={sample}
+              >
+                {sample}
+              </option>
+            )
+          })
+        }
+      </select>
+    </div>
+  )
 }
 
 SampleSelector.propTypes = {
