@@ -11,10 +11,10 @@ const Debug = ({
 }) =>
   <div className="c-Debug">
     <ul className="c-Debug__list">
-      <li className="c-Debug__list-item">currentCategory: { currentCategory }</li>
-      <li className="c-Debug__list-item">currentSample: { currentSample }</li>
-      <li className="c-Debug__list-item">isLooping: { isLooping.toString() }</li>
-      <li className="c-Debug__list-item">isPlaying: { isPlaying.toString() }</li>
+      <li className="c-Debug__list-item">currentCategory: {currentCategory}</li>
+      <li className="c-Debug__list-item">currentSample: {currentSample}</li>
+      <li className="c-Debug__list-item">isLooping: {isLooping.toString()}</li>
+      <li className="c-Debug__list-item">isPlaying: {isPlaying.toString()}</li>
     </ul>
   </div>
 
