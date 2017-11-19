@@ -8,10 +8,8 @@ body {
   font-display:     swap; // scss-lint:disable PropertySpelling
   font-family:      $font-family-serif;
   font-weight:      $font-weight-light;
-  min-height:       100%;
   padding:          constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
   position:         relative;
   text-rendering:   optimizeLegibility;
   text-size-adjust: 100%;
-  width:            100%;
 }
