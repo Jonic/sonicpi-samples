@@ -15,6 +15,7 @@ class Controls extends Component {
           categorySelectorChangeHandler={this.props.categorySelectorChangeHandler}
           currentCategory={this.props.currentCategory}
           isLoading={this.props.isLoading}
+          updateIsLoading={this.props.updateIsLoading}
         />
 
         <SampleSelector
@@ -22,6 +23,7 @@ class Controls extends Component {
           filteredSamples={this.props.filteredSamples}
           isLoading={this.props.isLoading}
           sampleSelectorChangeHandler={this.props.sampleSelectorChangeHandler}
+          updateIsLoading={this.props.updateIsLoading}
         />
 
         <LoopCheckbox
@@ -52,6 +54,7 @@ Controls.propTypes = {
   loopCheckboxClickHandler:      PropTypes.func.isRequired,
   playStopClickHandler:          PropTypes.func.isRequired,
   sampleSelectorChangeHandler:   PropTypes.func.isRequired,
+  updateIsLoading:               PropTypes.func.isRequired,
 }
 
 export default Controls

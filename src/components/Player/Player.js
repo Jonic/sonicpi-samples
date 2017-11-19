@@ -123,6 +123,7 @@ class Player extends Component {
           loopCheckboxClickHandler={this.loopCheckboxClickHandler}
           playStopClickHandler={this.playStopClickHandler}
           sampleSelectorChangeHandler={this.sampleSelectorChangeHandler}
+          updateIsLoading={this.props.updateIsLoading}
         />
 
         <Audio

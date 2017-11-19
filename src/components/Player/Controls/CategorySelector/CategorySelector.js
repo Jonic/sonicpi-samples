@@ -39,6 +39,7 @@ CategorySelector.propTypes = {
   categorySelectorChangeHandler: PropTypes.func.isRequired,
   currentCategory:               PropTypes.string.isRequired,
   isLoading:                     PropTypes.bool.isRequired,
+  updateIsLoading:               PropTypes.func.isRequired,
 }
 
 export default CategorySelector
