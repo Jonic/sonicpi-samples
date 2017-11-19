@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import categories from './_config/categories'
-import samples from './_config/samples'
+import categories from '../../_config/categories'
+import samples from '../../_config/samples'
 
 import Audio from './Audio/Audio'
 import Controls from './Controls/Controls'
