@@ -43,7 +43,7 @@ class Audio extends Component {
   }
 
   audioSource = () => {
-    return `${process.env.PUBLIC_URL}/assets/audio/${this.props.currentSample}.mp3`
+    return `${process.env.PUBLIC_URL}/audio/mp3/${this.props.currentSample}.mp3`
   }
 
   play = () => {
