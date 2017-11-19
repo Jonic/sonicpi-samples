@@ -1,30 +1,32 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
 
 import './PlayStop.css'
 
-class PlayStop extends Component {
-  determineLabel = () => {
-    return this.props.isPlaying ? 'Stop' : 'Play'
+const PlayStop = ({
+  isLoading,
+  isPlaying,
+  playStopClickHandler,
+}) => {
+  const determineLabel = () => {
+    return isPlaying ? 'Stop' : 'Play'
   }
 
-  handleClick = () => {
-    this.props.playStopClickHandler()
+  const handleClick = () => {
+    playStopClickHandler()
   }
 
-  render() {
-    return (
-      <div className="c-PlayStop">
-        <button
-          className="c-PlayStop__button"
-          onClick={this.handleClick}
-          disabled={this.props.isLoading}
-        >
-          {this.determineLabel()}
-        </button>
-      </div>
-    )
-  }
+  return (
+    <div className="c-PlayStop">
+      <button
+        className="c-PlayStop__button"
+        onClick={handleClick}
+        disabled={isLoading}
+      >
+        {determineLabel()}
+      </button>
+    </div>
+  )
 }
 
 PlayStop.propTypes = {
