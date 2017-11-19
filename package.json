@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://sonicpisamples.100yen.co.uk",
   "dependencies": {
+    "classnames": "^2.2.5",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^7.0.1",
     "gh-pages": "^1.0.0",
