@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
 
 import './Debug.css'
 
-class Debug extends Component {
-  render() {
-    return (
-      <div className="c-Debug">
-        <ul className="c-Debug__list">
-          <li className="c-Debug__list-item">currentCategory: {this.props.currentCategory}</li>
-          <li className="c-Debug__list-item">currentSample: {this.props.currentSample}</li>
-          <li className="c-Debug__list-item">isLooping: {this.props.isLooping.toString()}</li>
-          <li className="c-Debug__list-item">isPlaying: {this.props.isPlaying.toString()}</li>
-        </ul>
-      </div>
-    )
-  }
-}
+const Debug = ({
+  currentCategory,
+  currentSample,
+  isLooping,
+  isPlaying,
+}) =>
+  <div className="c-Debug">
+    <ul className="c-Debug__list">
+      <li className="c-Debug__list-item">currentCategory: { currentCategory }</li>
+      <li className="c-Debug__list-item">currentSample: { currentSample }</li>
+      <li className="c-Debug__list-item">isLooping: { isLooping.toString() }</li>
+      <li className="c-Debug__list-item">isPlaying: { isPlaying.toString() }</li>
+    </ul>
+  </div>
 
 Debug.propTypes = {
   currentCategory: PropTypes.string.isRequired,
