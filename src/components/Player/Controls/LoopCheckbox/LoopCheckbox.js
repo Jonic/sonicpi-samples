@@ -34,7 +34,6 @@ LoopCheckbox.propTypes = {
   isLoading:                PropTypes.bool.isRequired,
   isLooping:                PropTypes.bool.isRequired,
   loopCheckboxClickHandler: PropTypes.func.isRequired,
-  updateIsLoading:          PropTypes.func.isRequired,
 }
 
 export default LoopCheckbox
