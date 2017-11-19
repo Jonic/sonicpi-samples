@@ -15,6 +15,7 @@ $App-background-color:           $color-primary-navy;
 $App-color:                      $color-white;
 $App-transition-duration:        $transition-duration-extremely-long;
 $App-transition-timing-function: $transition-timing-eased;
+$App-padding:                    3vw;
 
 .c-App {
   animation-duration:        $App-transition-duration;
@@ -24,8 +25,15 @@ $App-transition-timing-function: $transition-timing-eased;
   animation-timing-function: $App-transition-timing-function;
   background-color:          $App-background-color;
   color:                     $App-color;
+  padding:                   $App-padding;
   height:                    100vh;
   width:                     100vw;
 }
 
-.c-App__title {}
+.c-App__title {
+  @include iota-type(10vw, 1.5);
+
+  font-style:  italic;
+  font-weight: $font-weight-light;
+  text-align:  center;
+}
