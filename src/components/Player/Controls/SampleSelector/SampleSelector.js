@@ -3,42 +3,24 @@ import React from 'react'
 
 import './SampleSelector.css'
 
+import Select from '../../../UI/Select/Select'
+
 const SampleSelector = ({
   currentSample,
   filteredSamples,
   isLoading,
   sampleSelectorChangeHandler,
-}) => {
-  const handleSampleChange = (event) => {
-    sampleSelectorChangeHandler(event.target.value)
-  }
+}) =>
+  <div className="c-SampleSelector">
+    Sample Selector:
 
-  return (
-    <div className="c-SampleSelector">
-      Sample Selector:
-
-      <select
-        className="c-SampleSelector__dropdown"
-        disabled={isLoading}
-        value={currentSample}
-        onChange={handleSampleChange}
-      >
-        {
-          filteredSamples.map((sample, index) => {
-            return (
-              <option
-                key={index}
-                value={sample}
-              >
-                {sample}
-              </option>
-            )
-          })
-        }
-      </select>
-    </div>
-  )
-}
+    <Select
+      disabled={isLoading}
+      onChange={sampleSelectorChangeHandler}
+      options={filteredSamples}
+      value={currentSample}
+    />
+  </div>
 
 SampleSelector.propTypes = {
   currentSample:               PropTypes.string.isRequired,

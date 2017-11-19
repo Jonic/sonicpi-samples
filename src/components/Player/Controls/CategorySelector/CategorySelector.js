@@ -3,41 +3,24 @@ import React from 'react'
 
 import './CategorySelector.css'
 
+import Select from '../../../UI/Select/Select'
+
 const CategorySelector = ({
   categories,
   categorySelectorChangeHandler,
   currentCategory,
   isLoading,
-}) => {
-  const handleCategoryChange = (event) => {
-    categorySelectorChangeHandler(event.target.value)
-  }
+}) =>
+  <div className="c-CategorySelector">
+    Category Selector:
 
-  return (
-    <div className="c-CategorySelector">
-      Category Selector:
-      <select
-        className="c-CategorySelector__dropdown"
-        disabled={isLoading}
-        value={currentCategory}
-        onChange={handleCategoryChange}
-      >
-        {
-          categories.map((category, index) => {
-            return (
-              <option
-                key={index}
-                value={category}
-              >
-                {category}
-              </option>
-            )
-          })
-        }
-      </select>
-    </div>
-  )
-}
+    <Select
+      disabled={isLoading}
+      onChange={categorySelectorChangeHandler}
+      options={categories}
+      value={currentCategory}
+    />
+  </div>
 
 CategorySelector.propTypes = {
   categories:                    PropTypes.array.isRequired,
