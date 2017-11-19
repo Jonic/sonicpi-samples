@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Player from './components/Player/Player'
+import Player from './Player/Player'
 
 class App extends Component {
   constructor() {
