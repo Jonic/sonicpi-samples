@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import config from '../../../_config/audio'
 import { trackPlay } from '../../../helpers/Analytics'
 
 class Audio extends Component {
@@ -43,8 +44,10 @@ class Audio extends Component {
   }
 
   audioSource = () => {
-    return `${process.env.PUBLIC_URL}/audio/mp3/${this.props.currentSample}.mp3`
+    return `${this.audioSourceDirectory()}/${this.props.currentSample}.mp3`
   }
+
+  audioSourceDirectory = () => `${process.env.PUBLIC_URL}/${config.mp3_source_directory}`
 
   play = () => {
     trackPlay()
