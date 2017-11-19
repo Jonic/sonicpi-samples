@@ -3,37 +3,40 @@ import React, { Component } from 'react'
 
 import './CategorySelector.css'
 
-class CategorySelector extends Component {
-  handleCategoryChange = (event) => {
-    this.props.categorySelectorChangeHandler(event.target.value)
+const CategorySelector = ({
+  categories,
+  categorySelectorChangeHandler,
+  currentCategory,
+  isLoading,
+}) => {
+  const handleCategoryChange = (event) => {
+    categorySelectorChangeHandler(event.target.value)
   }
 
-  render() {
-    return (
-      <div className="c-CategorySelector">
-        Category Selector:
-        <select
-          className="c-CategorySelector__dropdown"
-          disabled={this.props.isLoading}
-          value={this.props.currentCategory}
-          onChange={this.handleCategoryChange}
-        >
-          {
-            this.props.categories.map((category, index) => {
-              return (
-                <option
-                  key={index}
-                  value={category}
-                >
-                  {category}
-                </option>
-              )
-            })
-          }
-        </select>
-      </div>
-    )
-  }
+  return (
+    <div className="c-CategorySelector">
+      Category Selector:
+      <select
+        className="c-CategorySelector__dropdown"
+        disabled={isLoading}
+        value={currentCategory}
+        onChange={handleCategoryChange}
+      >
+        {
+          categories.map((category, index) => {
+            return (
+              <option
+                key={index}
+                value={category}
+              >
+                {category}
+              </option>
+            )
+          })
+        }
+      </select>
+    </div>
+  )
 }
 
 CategorySelector.propTypes = {
@@ -41,7 +44,6 @@ CategorySelector.propTypes = {
   categorySelectorChangeHandler: PropTypes.func.isRequired,
   currentCategory:               PropTypes.string.isRequired,
   isLoading:                     PropTypes.bool.isRequired,
-  updateIsLoading:               PropTypes.func.isRequired,
 }
 
 export default CategorySelector
