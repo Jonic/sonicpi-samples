@@ -50,7 +50,7 @@ class Audio extends Component {
   audioSourceDirectory = () => `${process.env.PUBLIC_URL}/${config.mp3_source_directory}`
 
   play = () => {
-    trackPlay()
+    trackPlay(this.props.currentSample)
     this.audioElement.play()
   }
 
