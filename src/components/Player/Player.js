@@ -6,8 +6,8 @@ import samples from './_config/samples'
 
 import Audio from './Audio/Audio'
 import Controls from './Controls/Controls'
-// import Debug from './Debug/Debug'
-// import Visualizer from './Visualizer/Visualizer'
+import Debug from './Debug/Debug'
+import Visualizer from './Visualizer/Visualizer'
 
 class Player extends Component {
   constructor(props) {
@@ -103,13 +103,13 @@ class Player extends Component {
       <div className="c-Player">
         <h1>Sonic Pi Samples</h1>
 
-        {/* <Debug
+        <Debug
           currentCategory={this.state.currentCategory}
           currentSample={this.state.currentSample}
           isLoading={this.props.isLoading}
           isLooping={this.state.isLooping}
           isPlaying={this.state.isPlaying}
-        /> */}
+        />
 
         <Controls
           categories={this.state.categories}
@@ -136,11 +136,11 @@ class Player extends Component {
           updateVisData={this.updateVisData}
         />
 
-        {/* <Visualizer
+        <Visualizer
           bufferLength={this.state.bufferLength}
           isPlaying={this.state.isPlaying}
           visData={this.state.visData}
-        /> */}
+        />
       </div>
     )
   }

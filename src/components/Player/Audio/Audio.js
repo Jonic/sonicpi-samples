@@ -76,18 +76,16 @@ class Audio extends Component {
 
   render() {
     return (
-      <div className="c-Audio">
-        <audio
-          className="c-Audio__element"
-          // controls
-          loop={this.props.isLooping}
-          onEnded={this.sampleEnded}
-          ref={audioElement => {
-            this.audioElement = audioElement
-          }}
-          src={this.audioSource()}
-        />
-      </div>
+      <audio
+        className="c-Audio"
+        // controls
+        loop={this.props.isLooping}
+        onEnded={this.sampleEnded}
+        ref={audioElement => {
+          this.audioElement = audioElement
+        }}
+        src={this.audioSource()}
+      />
     )
   }
 }

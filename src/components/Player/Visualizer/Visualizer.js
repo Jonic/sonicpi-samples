@@ -4,16 +4,18 @@ import PropTypes from 'prop-types'
 class Visualizer extends Component {
   constructor(props) {
     super(props)
+
     this.state = {
       height: 0,
       width:  0,
     }
+
+    this.className = 'c-Visualizer'
   }
 
   componentDidMount = () => {
-    this.updateWindowDimensions()
     window.addEventListener('resize', this.updateWindowDimensions)
-    this.context = this.canvas.getContext('2d')
+    this.updateWindowDimensions()
   }
 
   updateWindowDimensions = () => {
@@ -28,6 +30,7 @@ class Visualizer extends Component {
       return
     }
 
+    this.context = this.canvas.getContext('2d')
     this.canvas.width = this.canvas.width
 
     let barWidth = this.state.width / this.props.bufferLength * 2
@@ -47,7 +50,7 @@ class Visualizer extends Component {
   render() {
     return (
       <canvas
-        className="c-Visualizer"
+        className={this.className}
         height={this.state.height}
         ref={canvas => {
           this.canvas = canvas
