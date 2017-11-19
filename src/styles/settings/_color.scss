@@ -1,14 +1,14 @@
 $color-black:                  #000;
 $color-white:                  #fff;
 
-$color-primary-yellow:      #ffb12a;
+$color-primary-blue:        #41a6c4;
+$color-primary-green:       #53ce63;
+$color-primary-navy:        #004881;
 $color-primary-orange:      #f68e3b;
 $color-primary-red:         #f3524f;
-$color-primary-violet:      #a76fba;
-$color-primary-navy:        #004881;
-$color-primary-blue:        #41a6c4;
 $color-primary-turquoise:   #10aeb0;
-$color-primary-green:       #53ce63;
+$color-primary-violet:      #a76fba;
+$color-primary-yellow:      #ffb12a;
 
 $color-ui-black:               #222;
 $color-ui-grey-dark:           #444;
@@ -23,14 +23,14 @@ $color-ui-white:            #f5f6f9;
 $colors: (
   black:                    $color-black,
   white:                    $color-white,
-  primary-yellow:           $color-primary-yellow,
+  primary-blue:             $color-primary-blue,
+  primary-green:            $color-primary-green,
+  primary-navy:             $color-primary-navy,
   primary-orange:           $color-primary-orange,
   primary-red:              $color-primary-red,
-  primary-violet:           $color-primary-violet,
-  primary-navy:             $color-primary-navy,
-  primary-blue:             $color-primary-blue,
   primary-turquoise:        $color-primary-turquoise,
-  primary-green:            $color-primary-green,
+  primary-violet:           $color-primary-violet,
+  primary-yellow:           $color-primary-yellow,
   ui-black:                 $color-ui-black,
   ui-grey-dark:             $color-ui-grey-dark,
   ui-grey-medium:           $color-ui-grey-medium,
