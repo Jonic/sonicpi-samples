@@ -3,11 +3,13 @@ import React from 'react'
 
 import './LoopCheckbox.css'
 
-const LoopCheckbox = ({
-  isLoading,
-  isLooping,
-  loopCheckboxClickHandler,
-}) => {
+const LoopCheckbox = (props) => {
+  const {
+    isLoading,
+    isLooping,
+    loopCheckboxClickHandler,
+  } = props
+
   const determineChecked = () => {
     if (isLooping) {
       return 'checked'
@@ -23,6 +25,7 @@ const LoopCheckbox = ({
   return (
     <div className="c-LoopCheckbox">
       Loop Sample:
+
       <input
         checked={determineChecked()}
         className="c-LoopCheckbox__input"

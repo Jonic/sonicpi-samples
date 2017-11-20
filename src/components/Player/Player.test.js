@@ -1,20 +1,23 @@
 import React from 'react'
-import { mount, shallow } from 'enzyme'
+import { shallow } from 'enzyme'
 import Player from './Player'
+
+const isLoading = false
+const updateIsLoading = jest.fn()
 
 let wrapper
 
 describe('<Player />', () => {
   beforeEach(() => {
     wrapper = shallow(
-      <Player />
+      <Player
+        isLoading={isLoading}
+        updateIsLoading={updateIsLoading}
+      />
     )
   })
 
   it('renders without crashing', () => {
-    const mountedWrapper = mount(
-      <Player />
-    )
-    expect(mountedWrapper.find('.c-Player')).toBePresent()
+    expect(wrapper.find('.c-Player')).toBePresent()
   })
 })

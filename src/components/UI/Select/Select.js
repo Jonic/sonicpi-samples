@@ -3,33 +3,31 @@ import React from 'react'
 
 import './Select.css'
 
-const Select = ({
-  options,
-  onChange,
-  value,
-  disabled,
-}) =>
-  <select
-    className="c-Select"
-    disabled={disabled}
-    value={value}
-    onChange={(event) => {
-      onChange(event.target.value)
-    }}
-  >
-    {
-      options.map((option, index) => {
-        return (
-          <option
-            key={index}
-            value={option}
-          >
-            {option}
-          </option>
-        )
-      })
-    }
-  </select>
+const Select = (props) => {
+  const {
+    options,
+    onChange,
+    value,
+    disabled,
+  } = props
+
+  return (
+    <select
+      className="c-Select"
+      disabled={disabled}
+      value={value}
+      onChange={event => onChange(event.target.value)}
+    >
+      {
+        options.map((option, index) => {
+          return (
+            <option key={index} value={option}>{option}</option>
+          )
+        })
+      }
+    </select>
+  )
+}
 
 Select.propTypes = {
   disabled: PropTypes.bool.isRequired,

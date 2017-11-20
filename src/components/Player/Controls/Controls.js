@@ -8,49 +8,54 @@ import PlayStop from './PlayStop/PlayStop'
 import LoopCheckbox from './LoopCheckbox/LoopCheckbox'
 import SampleSelector from './SampleSelector/SampleSelector'
 
-const Controls = ({
-  categories,
-  categorySelectorChangeHandler,
-  currentCategory,
-  currentSample,
-  filteredSamples,
-  isLoading,
-  isLooping,
-  isPlaying,
-  loopCheckboxClickHandler,
-  playStopClickHandler,
-  sampleSelectorChangeHandler,
-  updateIsLoading,
-}) =>
-  <div className="c-Controls">
-    <CategorySelector
-      categories={categories}
-      categorySelectorChangeHandler={categorySelectorChangeHandler}
-      currentCategory={currentCategory}
-      isLoading={isLoading}
-      updateIsLoading={updateIsLoading}
-    />
+const Controls = (props) => {
+  const {
+    categories,
+    categorySelectorChangeHandler,
+    currentCategory,
+    currentSample,
+    filteredSamples,
+    isLoading,
+    isLooping,
+    isPlaying,
+    loopCheckboxClickHandler,
+    playStopClickHandler,
+    sampleSelectorChangeHandler,
+    updateIsLoading,
+  } = props
 
-    <SampleSelector
-      currentSample={currentSample}
-      filteredSamples={filteredSamples}
-      isLoading={isLoading}
-      sampleSelectorChangeHandler={sampleSelectorChangeHandler}
-      updateIsLoading={updateIsLoading}
-    />
+  return (
+    <div className="c-Controls">
+      <CategorySelector
+        categories={categories}
+        categorySelectorChangeHandler={categorySelectorChangeHandler}
+        currentCategory={currentCategory}
+        isLoading={isLoading}
+        updateIsLoading={updateIsLoading}
+      />
 
-    <LoopCheckbox
-      isLoading={isLoading}
-      isLooping={isLooping}
-      loopCheckboxClickHandler={loopCheckboxClickHandler}
-    />
+      <SampleSelector
+        currentSample={currentSample}
+        filteredSamples={filteredSamples}
+        isLoading={isLoading}
+        sampleSelectorChangeHandler={sampleSelectorChangeHandler}
+        updateIsLoading={updateIsLoading}
+      />
 
-    <PlayStop
-      isLoading={isLoading}
-      isPlaying={isPlaying}
-      playStopClickHandler= {playStopClickHandler}
-    />
-  </div>
+      <LoopCheckbox
+        isLoading={isLoading}
+        isLooping={isLooping}
+        loopCheckboxClickHandler={loopCheckboxClickHandler}
+      />
+
+      <PlayStop
+        isLoading={isLoading}
+        isPlaying={isPlaying}
+        playStopClickHandler= {playStopClickHandler}
+      />
+    </div>
+  )
+}
 
 Controls.propTypes = {
   categories:                    PropTypes.array.isRequired,

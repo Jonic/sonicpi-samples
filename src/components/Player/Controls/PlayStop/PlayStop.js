@@ -3,11 +3,13 @@ import React from 'react'
 
 import './PlayStop.css'
 
-const PlayStop = ({
-  isLoading,
-  isPlaying,
-  playStopClickHandler,
-}) => {
+const PlayStop = (props) => {
+  const {
+    isLoading,
+    isPlaying,
+    playStopClickHandler,
+  } = props
+
   const determineLabel = () => {
     return isPlaying ? 'Stop' : 'Play'
   }

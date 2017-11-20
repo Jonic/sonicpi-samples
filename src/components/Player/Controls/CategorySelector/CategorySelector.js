@@ -5,22 +5,27 @@ import './CategorySelector.css'
 
 import Select from '../../../UI/Select/Select'
 
-const CategorySelector = ({
-  categories,
-  categorySelectorChangeHandler,
-  currentCategory,
-  isLoading,
-}) =>
-  <div className="c-CategorySelector">
-    Category Selector:
+const CategorySelector = (props) => {
+  const {
+    categories,
+    categorySelectorChangeHandler,
+    currentCategory,
+    isLoading,
+  } = props
 
-    <Select
-      disabled={isLoading}
-      onChange={categorySelectorChangeHandler}
-      options={categories}
-      value={currentCategory}
-    />
-  </div>
+  return (
+    <div className="c-CategorySelector">
+      Category Selector:
+
+      <Select
+        disabled={isLoading}
+        onChange={categorySelectorChangeHandler}
+        options={categories}
+        value={currentCategory}
+      />
+    </div>
+  )
+}
 
 CategorySelector.propTypes = {
   categories:                    PropTypes.array.isRequired,
