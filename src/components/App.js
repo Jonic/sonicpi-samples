@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+
 import Player from './Player/Player'
+
+import { trackPageView } from '../helpers/Analytics'
 
 import './App.css'
 
@@ -10,6 +13,10 @@ class App extends Component {
     this.state = {
       isLoading: false,
     }
+  }
+
+  componentDidMount() {
+    trackPageView()
   }
 
   toggleIsLoading = () => {
