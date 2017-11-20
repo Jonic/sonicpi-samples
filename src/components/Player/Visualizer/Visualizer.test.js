@@ -1,20 +1,25 @@
 import React from 'react'
-import { mount, shallow } from 'enzyme'
+import { shallow } from 'enzyme'
 import Visualizer from './Visualizer'
+
+const bufferLength = 0
+const isPlaying = false
+const visData = {}
 
 let wrapper
 
 describe('<Visualizer />', () => {
   beforeEach(() => {
     wrapper = shallow(
-      <Visualizer />
+      <Visualizer
+        bufferLength={bufferLength}
+        isPlaying={isPlaying}
+        visData={visData}
+      />
     )
   })
 
   it('renders without crashing', () => {
-    const mountedWrapper = mount(
-      <Visualizer />
-    )
-    expect(mountedWrapper.find('.c-Visualizer')).toBePresent()
+    expect(wrapper.find('.c-Visualizer')).toBePresent()
   })
 })

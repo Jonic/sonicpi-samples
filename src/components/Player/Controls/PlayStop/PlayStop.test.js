@@ -1,20 +1,25 @@
 import React from 'react'
-import { mount, shallow } from 'enzyme'
+import { shallow } from 'enzyme'
 import PlayStop from './PlayStop'
+
+const isLoading = false
+const isPlaying = false
+const playStopClickHandler = jest.fn()
 
 let wrapper
 
 describe('<PlayStop />', () => {
   beforeEach(() => {
     wrapper = shallow(
-      <PlayStop />
+      <PlayStop
+        isLoading={isLoading}
+        isPlaying={isPlaying}
+        playStopClickHandler={playStopClickHandler}
+      />
     )
   })
 
   it('renders without crashing', () => {
-    const mountedWrapper = mount(
-      <PlayStop />
-    )
-    expect(mountedWrapper.find('.c-PlayStop')).toBePresent()
+    expect(wrapper.find('.c-PlayStop')).toBePresent()
   })
 })
