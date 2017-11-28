@@ -23,7 +23,7 @@ describe('<Select />', () => {
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-Select')).toBePresent()
+      expect(wrapper.find('.c-select')).toBePresent()
     })
 
     it('matches its snapshot', () => {

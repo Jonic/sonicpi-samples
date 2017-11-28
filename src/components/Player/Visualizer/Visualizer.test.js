@@ -21,7 +21,7 @@ describe('<Visualizer />', () => {
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-Visualizer')).toBePresent()
+      expect(wrapper.find('.c-visualizer')).toBePresent()
     })
 
     it('matches its snapshot', () => {

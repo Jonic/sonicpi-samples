@@ -2,11 +2,12 @@
 
 exports[`<SampleSelector /> Renders... matches its snapshot 1`] = `
 <div
-  className="c-SampleSelector"
+  className="c-sample-selector"
 >
   Sample Selector:
    
   <Select
+    className="c-sample-selector__select"
     disabled={false}
     onChange={[Function]}
     options={Array []}

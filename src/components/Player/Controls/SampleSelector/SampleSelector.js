@@ -12,10 +12,11 @@ const SampleSelector = (props) => {
   } = props
 
   return (
-    <div className="c-SampleSelector">
+    <div className="c-sample-selector">
       Sample Selector:
       {' '}
       <Select
+        className="c-sample-selector__select"
         disabled={isLoading}
         onChange={sampleSelectorChangeHandler}
         options={filteredSamples}

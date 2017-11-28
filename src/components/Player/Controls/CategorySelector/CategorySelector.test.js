@@ -23,7 +23,7 @@ describe('<CategorySelector />', () => {
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-CategorySelector')).toBePresent()
+      expect(wrapper.find('.c-category-selector')).toBePresent()
     })
 
     it('matches its snapshot', () => {

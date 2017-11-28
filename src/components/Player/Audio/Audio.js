@@ -80,7 +80,7 @@ class Audio extends Component {
   render() {
     return (
       <audio
-        className="c-Audio"
+        className="c-audio"
         // controls
         loop={this.props.isLooping}
         onEnded={this.sampleEnded}

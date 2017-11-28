@@ -15,7 +15,7 @@ describe('<App />', () => {
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-App')).toBePresent()
+      expect(wrapper.find('.c-app')).toBePresent()
     })
 
     it('matches its snapshot', () => {

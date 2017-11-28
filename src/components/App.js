@@ -29,8 +29,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="c-App">
-        <h1 className="c-App__title">
+      <div className="c-app">
+        <h1 className="c-app__title">
           Sonic Pi Samples
         </h1>
         {' '}

@@ -2,10 +2,10 @@
 
 exports[`<App /> Renders... matches its snapshot 1`] = `
 <div
-  className="c-App"
+  className="c-app"
 >
   <h1
-    className="c-App__title"
+    className="c-app__title"
   >
     Sonic Pi Samples
   </h1>

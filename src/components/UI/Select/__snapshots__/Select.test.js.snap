@@ -2,7 +2,7 @@
 
 exports[`<Select /> Renders... matches its snapshot 1`] = `
 <select
-  className="c-Select"
+  className="c-select"
   disabled={false}
   onChange={[Function]}
   value=""

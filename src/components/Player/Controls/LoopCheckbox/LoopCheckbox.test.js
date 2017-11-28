@@ -21,7 +21,7 @@ describe('<LoopCheckbox />', () => {
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-LoopCheckbox')).toBePresent()
+      expect(wrapper.find('.c-loop-checkbox')).toBePresent()
     })
 
     it('matches its snapshot', () => {

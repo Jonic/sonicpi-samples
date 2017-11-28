@@ -33,7 +33,7 @@ xdescribe('<Audio />', () => {
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-Audio')).toBePresent()
+      expect(wrapper.find('.c-audio')).toBePresent()
     })
 
     it('matches its snapshot', () => {

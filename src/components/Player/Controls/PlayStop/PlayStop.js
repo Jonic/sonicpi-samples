@@ -18,9 +18,9 @@ const PlayStop = (props) => {
   }
 
   return (
-    <div className="c-PlayStop">
+    <div className="c-play-stop">
       <button
-        className="c-PlayStop__button"
+        className="c-play-stop__button"
         onClick={handleClick}
         disabled={isLoading}
       >

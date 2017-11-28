@@ -10,8 +10,6 @@ class Visualizer extends Component {
       height: 0,
       width:  0,
     }
-
-    this.className = 'c-Visualizer'
   }
 
   componentDidMount = () => {
@@ -51,7 +49,7 @@ class Visualizer extends Component {
   render() {
     return (
       <canvas
-        className={this.className}
+        className="c-visualizer"
         height={this.state.height}
         ref={canvas => {
           this.canvas = canvas

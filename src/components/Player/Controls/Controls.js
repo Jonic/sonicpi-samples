@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import SampleSelector from './SampleSelector/SampleSelector'
 
-const Controls = (props) => {
+const Controls = props => {
   const {
     categories,
     categorySelectorChangeHandler,
@@ -23,7 +23,7 @@ const Controls = (props) => {
   } = props
 
   return (
-    <div className="c-Controls">
+    <div className="c-controls">
       <CategorySelector
         categories={categories}
         categorySelectorChangeHandler={categorySelectorChangeHandler}

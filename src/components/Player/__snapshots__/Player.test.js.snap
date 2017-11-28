@@ -2,7 +2,7 @@
 
 exports[`<Player /> Renders... matches its snapshot 1`] = `
 <div
-  className="c-Player"
+  className="c-player"
 >
   <Debug
     currentCategory="all"

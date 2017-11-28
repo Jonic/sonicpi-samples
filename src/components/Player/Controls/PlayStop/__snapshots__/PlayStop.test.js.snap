@@ -2,10 +2,10 @@
 
 exports[`<PlayStop /> Renders... matches its snapshot 1`] = `
 <div
-  className="c-PlayStop"
+  className="c-play-stop"
 >
   <button
-    className="c-PlayStop__button"
+    className="c-play-stop__button"
     disabled={false}
     onClick={[Function]}
   >

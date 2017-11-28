@@ -23,7 +23,7 @@ describe('<Debug />', () => {
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-Debug')).toBePresent()
+      expect(wrapper.find('.c-debug')).toBePresent()
     })
 
     it('matches its snapshot', () => {

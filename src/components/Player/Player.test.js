@@ -23,11 +23,11 @@ describe('<Player />', () => {
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-Player')).toBePresent()
+      expect(wrapper.find('.c-player')).toBePresent()
     })
 
     it('matches its snapshot', () => {
-      expect(wrapper).toMatchSnapshot();
+      expect(wrapper).toMatchSnapshot()
     })
   })
 

@@ -13,10 +13,11 @@ const CategorySelector = (props) => {
   } = props
 
   return (
-    <div className="c-CategorySelector">
+    <div className="c-category-selector">
       Category Selector:
       {' '}
       <Select
+        className="c-category-selector__select"
         disabled={isLoading}
         onChange={categorySelectorChangeHandler}
         options={categories}

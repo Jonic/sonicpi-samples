@@ -2,11 +2,12 @@
 
 exports[`<CategorySelector /> Renders... matches its snapshot 1`] = `
 <div
-  className="c-CategorySelector"
+  className="c-category-selector"
 >
   Category Selector:
    
   <Select
+    className="c-category-selector__select"
     disabled={false}
     onChange={[Function]}
     options={Array []}

@@ -21,7 +21,7 @@ describe('<PlayStop />', () => {
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-PlayStop')).toBePresent()
+      expect(wrapper.find('.c-play-stop')).toBePresent()
     })
 
     it('matches its snapshot', () => {

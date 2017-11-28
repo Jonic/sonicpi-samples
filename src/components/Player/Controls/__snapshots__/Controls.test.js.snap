@@ -2,7 +2,7 @@
 
 exports[`<Controls /> Renders... matches its snapshot 1`] = `
 <div
-  className="c-Controls"
+  className="c-controls"
 >
   <CategorySelector
     categories={Array []}

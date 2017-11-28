@@ -11,26 +11,26 @@
   87.5%    { background-color: $color-primary-violet;    }
 }
 
-$App-background-color:           $color-primary-navy;
-$App-color:                      $color-white;
-$App-transition-duration:        $transition-duration-extremely-long;
-$App-transition-timing-function: $transition-timing-eased;
-$App-padding:                    3vw;
+$app-background-color:           $color-primary-navy;
+$app-color:                      $color-white;
+$app-transition-duration:        $transition-duration-extremely-long;
+$app-transition-timing-function: $transition-timing-eased;
+$app-padding:                    3vw;
 
-.c-App {
-  animation-duration:        $App-transition-duration;
+.c-app {
+  animation-duration:        $app-transition-duration;
   animation-fill-mode:       forwards;
   animation-iteration-count: infinite;
   animation-name:            bg-color-fade;
-  animation-timing-function: $App-transition-timing-function;
-  background-color:          $App-background-color;
-  color:                     $App-color;
-  padding:                   $App-padding;
+  animation-timing-function: $app-transition-timing-function;
+  background-color:          $app-background-color;
+  color:                     $app-color;
+  padding:                   $app-padding;
   height:                    100vh;
   width:                     100vw;
 }
 
-.c-App__title {
+.c-app__title {
   @include iota-type(10vw, 1.5);
 
   font-style:  italic;

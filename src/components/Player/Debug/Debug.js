@@ -11,12 +11,12 @@ const Debug = (props) => {
   } = props
 
   return (
-    <div className="c-Debug">
-      <ul className="c-Debug__list">
-        <li className="c-Debug__list-item">currentCategory: {currentCategory}</li>
-        <li className="c-Debug__list-item">currentSample: {currentSample}</li>
-        <li className="c-Debug__list-item">isLooping: {isLooping.toString()}</li>
-        <li className="c-Debug__list-item">isPlaying: {isPlaying.toString()}</li>
+    <div className="c-debug">
+      <ul className="c-debug__list">
+        <li className="c-debug__list-item">currentCategory: {currentCategory}</li>
+        <li className="c-debug__list-item">currentSample: {currentSample}</li>
+        <li className="c-debug__list-item">isLooping: {isLooping.toString()}</li>
+        <li className="c-debug__list-item">isPlaying: {isPlaying.toString()}</li>
       </ul>
     </div>
   )

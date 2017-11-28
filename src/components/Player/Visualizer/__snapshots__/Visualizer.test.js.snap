@@ -2,7 +2,7 @@
 
 exports[`<Visualizer /> Renders... matches its snapshot 1`] = `
 <canvas
-  className="c-Visualizer"
+  className="c-visualizer"
   height={768}
   style={
     Object {

@@ -76,7 +76,7 @@ class Player extends Component {
 
   render() {
     return (
-      <div className="c-Player">
+      <div className="c-player">
         <Debug
           currentCategory={this.state.currentCategory}
           currentSample={this.state.currentSample}

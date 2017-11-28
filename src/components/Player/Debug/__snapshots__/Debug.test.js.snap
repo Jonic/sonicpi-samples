@@ -2,29 +2,29 @@
 
 exports[`<Debug /> Renders... matches its snapshot 1`] = `
 <div
-  className="c-Debug"
+  className="c-debug"
 >
   <ul
-    className="c-Debug__list"
+    className="c-debug__list"
   >
     <li
-      className="c-Debug__list-item"
+      className="c-debug__list-item"
     >
       currentCategory: 
     </li>
     <li
-      className="c-Debug__list-item"
+      className="c-debug__list-item"
     >
       currentSample: 
     </li>
     <li
-      className="c-Debug__list-item"
+      className="c-debug__list-item"
     >
       isLooping: 
       false
     </li>
     <li
-      className="c-Debug__list-item"
+      className="c-debug__list-item"
     >
       isPlaying: 
       false

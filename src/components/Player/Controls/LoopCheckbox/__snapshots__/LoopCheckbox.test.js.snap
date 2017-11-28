@@ -2,7 +2,7 @@
 
 exports[`<LoopCheckbox /> Renders... matches its snapshot 1`] = `
 <div
-  className="c-LoopCheckbox"
+  className="c-loop-checkbox"
 >
   Loop Sample:
    
