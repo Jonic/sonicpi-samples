@@ -1,4 +1,6 @@
-const getSamplesForCategory = (category, samples) => {
+import samples from '../_config/samples'
+
+const getSamplesForCategory = (category) => {
   if (category === 'all') {
     return samples
   }
