@@ -26,6 +26,17 @@ class Player extends Component {
     }
   }
 
+  categorySelectorChangeHandler = category => {
+    let filteredSamples = getSamplesForCategory(category)
+
+    this.setState({
+      currentCategory: category,
+      currentSample:   filteredSamples[0],
+      filteredSamples: filteredSamples,
+      isPlaying:       false,
+    })
+  }
+
   loopCheckboxClickHandler = () => {
     this.setState({
       isLooping: !this.state.isLooping,
@@ -35,17 +46,6 @@ class Player extends Component {
   playStopClickHandler = () => {
     this.setState({
       isPlaying: !this.state.isPlaying,
-    })
-  }
-
-  categorySelectorChangeHandler = category => {
-    let filteredSamples = getSamplesForCategory(category)
-
-    this.setState({
-      currentCategory: category,
-      currentSample:   filteredSamples[0],
-      filteredSamples: filteredSamples,
-      isPlaying:       false,
     })
   }
 
