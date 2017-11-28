@@ -25,13 +25,16 @@ $app-padding:                    3vw;
   animation-timing-function: $app-transition-timing-function;
   background-color:          $app-background-color;
   color:                     $app-color;
-  padding:                   $app-padding;
   height:                    100vh;
+  padding:                   $app-padding;
   width:                     100vw;
 }
 
+$app-title-font-size:   10vw;
+$app-title-line-height: 1.5;
+
 .c-app__title {
-  @include iota-type(10vw, 1.5);
+  @include iota-type($app-title-font-size, $app-title-line-height);
 
   font-style:  italic;
   font-weight: $font-weight-light;
