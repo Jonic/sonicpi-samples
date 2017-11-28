@@ -1,7 +1,6 @@
+import './LoopCheckbox.css'
 import PropTypes from 'prop-types'
 import React from 'react'
-
-import './LoopCheckbox.css'
 
 const LoopCheckbox = (props) => {
   const {

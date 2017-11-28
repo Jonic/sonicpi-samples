@@ -1,7 +1,6 @@
+import './Debug.css'
 import PropTypes from 'prop-types'
 import React from 'react'
-
-import './Debug.css'
 
 const Debug = (props) => {
   const {

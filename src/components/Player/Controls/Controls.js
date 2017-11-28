@@ -1,11 +1,9 @@
+import './Controls.css'
+import CategorySelector from './CategorySelector/CategorySelector'
+import LoopCheckbox from './LoopCheckbox/LoopCheckbox'
+import PlayStop from './PlayStop/PlayStop'
 import PropTypes from 'prop-types'
 import React from 'react'
-
-import './Controls.css'
-
-import CategorySelector from './CategorySelector/CategorySelector'
-import PlayStop from './PlayStop/PlayStop'
-import LoopCheckbox from './LoopCheckbox/LoopCheckbox'
 import SampleSelector from './SampleSelector/SampleSelector'
 
 const Controls = (props) => {

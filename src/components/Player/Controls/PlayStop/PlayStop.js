@@ -1,7 +1,6 @@
+import './PlayStop.css'
 import PropTypes from 'prop-types'
 import React from 'react'
-
-import './PlayStop.css'
 
 const PlayStop = (props) => {
   const {

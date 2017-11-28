@@ -1,7 +1,6 @@
+import './CategorySelector.css'
 import PropTypes from 'prop-types'
 import React from 'react'
-
-import './CategorySelector.css'
 
 import Select from '../../../UI/Select/Select'
 

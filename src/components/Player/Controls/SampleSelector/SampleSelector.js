@@ -1,8 +1,6 @@
+import './SampleSelector.css'
 import PropTypes from 'prop-types'
 import React from 'react'
-
-import './SampleSelector.css'
-
 import Select from '../../../UI/Select/Select'
 
 const SampleSelector = (props) => {

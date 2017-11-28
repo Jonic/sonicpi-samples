@@ -1,7 +1,6 @@
+import './Select.css'
 import PropTypes from 'prop-types'
 import React from 'react'
-
-import './Select.css'
 
 const Select = (props) => {
   const {

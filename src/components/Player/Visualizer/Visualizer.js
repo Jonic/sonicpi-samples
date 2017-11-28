@@ -1,7 +1,6 @@
+import './Visualizer.css'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-
-import './Visualizer.css'
 
 class Visualizer extends Component {
   constructor(props) {
