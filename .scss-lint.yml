@@ -1,30 +1,41 @@
+# scss-lint options. See the following for a full list of linters and what they do:
+# https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
 exclude:
   - 'node_modules/**/*.*'
 linters:
-  ColorVariable:
-    enabled: false
-
+  BemDepth:
+    enabled: true
+  ChainedClasses:
+    enabled: true
   Comment:
     enabled: false
-
-  ElsePlacement:
+  DisableLinterReason:
     enabled: true
-    style: new_line
-
-  ImportPath:
+  ExtendDirective:
+    enabled: true
+  LengthVariable:
+    enabled: true
+    allowed_lengths: ["0", 100%, 100vh, 100vw]
+  NameFormat:
     enabled: false
-
+  PrivateNamingConvention:
+    enabled: true
   SelectorFormat:
     convention: hyphenated_BEM
-
   SpaceAfterComma:
-    enabled: true
+    enabled: true,
     style: at_least_one_space
-
+  SpaceAfterComment:
+    style: at_least_one_space
   SpaceAfterPropertyColon:
-    enabled: true
     style: aligned
-
   SpaceAfterVariableColon:
-    enabled: false
     style: at_least_one_space
+  SpaceBeforeBrace:
+    allow_single_line_padding: true
+  TrailingZero:
+    enabled: true
+  TransitionAll:
+    enabled: true
+scss_files: 'src/**/*.scss'
+severity: warning
