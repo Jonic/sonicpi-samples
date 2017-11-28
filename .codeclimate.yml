@@ -8,6 +8,8 @@ engines:
   scss-lint:
     enabled: true
 exclude_paths: []
+exclude_patterns:
+  - "src/*.js"
 ratings:
   paths:
     - "**.inc"
