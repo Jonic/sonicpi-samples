@@ -32,13 +32,14 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "build": "npm install --force && node-sass-chokidar src/ -o src/ && react-scripts build",
+    "coverage": "react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/**/*js --collectCoverageFrom=!src/*.js",
     "deploy": "gh-pages -d build",
     "dev": "npm-run-all -p watch-css start",
     "eject": "react-scripts eject",
     "lint": "eslint src/. --ext .js; exit 0;",
     "predeploy": "rm -rf node_modules/gh-pages/.cache && yarn run build",
     "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom --watch --coverage --collectCoverageFrom=src/**/*js --collectCoverageFrom=!src/*.js",
+    "test": "react-scripts test --env=jsdom",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   }
 }
