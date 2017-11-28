@@ -25,7 +25,7 @@ const LoopCheckbox = (props) => {
   return (
     <div className="c-LoopCheckbox">
       Loop Sample:
-
+      {' '}
       <input
         checked={determineChecked()}
         className="c-LoopCheckbox__input"

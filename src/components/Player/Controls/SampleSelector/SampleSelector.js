@@ -16,7 +16,7 @@ const SampleSelector = (props) => {
   return (
     <div className="c-SampleSelector">
       Sample Selector:
-
+      {' '}
       <Select
         disabled={isLoading}
         onChange={sampleSelectorChangeHandler}

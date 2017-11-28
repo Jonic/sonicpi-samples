@@ -16,7 +16,7 @@ const CategorySelector = (props) => {
   return (
     <div className="c-CategorySelector">
       Category Selector:
-
+      {' '}
       <Select
         disabled={isLoading}
         onChange={categorySelectorChangeHandler}
