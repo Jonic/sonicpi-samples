@@ -35,11 +35,13 @@ class Player extends Component {
   }
 
   playStopClickHandler = () => {
-    this.toggleIsPlayingState()
+    this.setState({
+      isPlaying: !this.state.isPlaying,
+    })
   }
 
   categorySelectorChangeHandler = category => {
-    let filteredSamples = this.getSamplesForCategory(category)
+    let filteredSamples = getSamplesForCategory(category)
 
     this.setState({
       currentCategory: category,
@@ -50,7 +52,9 @@ class Player extends Component {
   }
 
   sampleEndedHandler = () => {
-    this.setIsPlayingStateTo(false)
+    this.setState({
+      isPlaying: false,
+    })
   }
 
   sampleSelectorChangeHandler = sample => {
@@ -58,16 +62,6 @@ class Player extends Component {
       currentSample: sample,
       isPlaying:     false,
     })
-  }
-
-  setIsPlayingStateTo = newState => {
-    this.setState({
-      isPlaying: newState,
-    })
-  }
-
-  toggleIsPlayingState = () => {
-    this.setIsPlayingStateTo(!this.state.isPlaying)
   }
 
   updateBufferLength = bufferLength => {
