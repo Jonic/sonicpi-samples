@@ -1,14 +1,12 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-
 import './Player.css'
-
-import categories from '../../_config/categories'
-import samples from '../../_config/samples'
-
+import { getSamplesForCategory } from '../../helpers/SamplesCategories'
 import Audio from './Audio/Audio'
+import categories from '../../_config/categories'
 import Controls from './Controls/Controls'
 import Debug from './Debug/Debug'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import samples from '../../_config/samples'
 import Visualizer from './Visualizer/Visualizer'
 
 class Player extends Component {
