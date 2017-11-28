@@ -110,5 +110,23 @@ describe('<Player />', () => {
         expect(isPlaying).toEqual(expectedIsPlaying)
       })
     })
+
+    describe('updateBufferLength', () => {
+      it('sets state correctly', () => {
+        let expectedBufferLength = 64
+        wrapper.instance().updateBufferLength(expectedBufferLength)
+        expect(wrapper.state().bufferLength).toEqual(expectedBufferLength)
+      })
+    })
+
+    describe('updateVisData', () => {
+      it('sets state correctly', () => {
+        let expectedVisData = {
+          foo: 'bar',
+        }
+        wrapper.instance().updateVisData(expectedVisData)
+        expect(wrapper.state().visData).toEqual(expectedVisData)
+      })
+    })
   })
 })
