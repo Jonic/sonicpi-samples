@@ -28,24 +28,6 @@ class Player extends Component {
     }
   }
 
-  getSamplesForCategory = category => {
-    if (category === 'all') {
-      return this.state.samples
-    }
-
-    let filteredSamples = []
-
-    this.state.samples.map(sample => {
-      if (sample.startsWith(category)) {
-        filteredSamples.push(sample)
-      }
-
-      return null
-    })
-
-    return filteredSamples
-  }
-
   loopCheckboxClickHandler = () => {
     this.setState({
       isLooping: !this.state.isLooping,
