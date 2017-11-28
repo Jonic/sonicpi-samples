@@ -13,7 +13,13 @@ describe('<App />', () => {
     )
   })
 
-  it('renders without crashing', () => {
-    expect(wrapper.find('.c-App')).toBePresent()
+  describe('Renders...', () => {
+    it('without crashing', () => {
+      expect(wrapper.find('.c-App')).toBePresent()
+    })
+
+    it('matches its snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 })

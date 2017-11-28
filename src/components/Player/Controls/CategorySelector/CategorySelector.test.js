@@ -21,7 +21,13 @@ describe('<CategorySelector />', () => {
     )
   })
 
-  it('renders without crashing', () => {
-    expect(wrapper.find('.c-CategorySelector')).toBePresent()
+  describe('Renders...', () => {
+    it('without crashing', () => {
+      expect(wrapper.find('.c-CategorySelector')).toBePresent()
+    })
+
+    it('matches its snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 })

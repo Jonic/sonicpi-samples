@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoopCheckbox /> Renders... matches its snapshot 1`] = `
+<div
+  className="c-LoopCheckbox"
+>
+  Loop Sample:
+   
+  <input
+    checked={false}
+    className="c-LoopCheckbox__input"
+    disabled={false}
+    onClick={[Function]}
+    type="checkbox"
+  />
+</div>
+`;

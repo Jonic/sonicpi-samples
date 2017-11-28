@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> Renders... matches its snapshot 1`] = `
+<div
+  className="c-App"
+>
+  <h1
+    className="c-App__title"
+  >
+    Sonic Pi Samples
+  </h1>
+   
+  <Player
+    isLoading={false}
+    toggleIsLoading={[Function]}
+    updateIsLoading={[Function]}
+  />
+</div>
+`;

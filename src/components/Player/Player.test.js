@@ -25,6 +25,10 @@ describe('<Player />', () => {
     it('without crashing', () => {
       expect(wrapper.find('.c-Player')).toBePresent()
     })
+
+    it('matches its snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    })
   })
 
   describe('Methods', () => {

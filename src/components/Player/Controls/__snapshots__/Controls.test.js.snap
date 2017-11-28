@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Controls /> Renders... matches its snapshot 1`] = `
+<div
+  className="c-Controls"
+>
+  <CategorySelector
+    categories={Array []}
+    categorySelectorChangeHandler={[Function]}
+    currentCategory=""
+    isLoading={false}
+    updateIsLoading={[Function]}
+  />
+  <SampleSelector
+    currentSample=""
+    filteredSamples={Array []}
+    isLoading={false}
+    sampleSelectorChangeHandler={[Function]}
+    updateIsLoading={[Function]}
+  />
+  <LoopCheckbox
+    isLoading={false}
+    isLooping={false}
+    loopCheckboxClickHandler={[Function]}
+  />
+  <PlayStop
+    isLoading={false}
+    isPlaying={false}
+    playStopClickHandler={[Function]}
+  />
+</div>
+`;

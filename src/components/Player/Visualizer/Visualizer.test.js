@@ -19,7 +19,13 @@ describe('<Visualizer />', () => {
     )
   })
 
-  it('renders without crashing', () => {
-    expect(wrapper.find('.c-Visualizer')).toBePresent()
+  describe('Renders...', () => {
+    it('without crashing', () => {
+      expect(wrapper.find('.c-Visualizer')).toBePresent()
+    })
+
+    it('matches its snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 })

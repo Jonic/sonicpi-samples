@@ -21,7 +21,13 @@ describe('<Debug />', () => {
     )
   })
 
-  it('renders without crashing', () => {
-    expect(wrapper.find('.c-Debug')).toBePresent()
+  describe('Renders...', () => {
+    it('without crashing', () => {
+      expect(wrapper.find('.c-Debug')).toBePresent()
+    })
+
+    it('matches its snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 })

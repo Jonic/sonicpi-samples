@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SampleSelector /> Renders... matches its snapshot 1`] = `
+<div
+  className="c-SampleSelector"
+>
+  Sample Selector:
+   
+  <Select
+    disabled={false}
+    onChange={[Function]}
+    options={Array []}
+    value=""
+  />
+</div>
+`;

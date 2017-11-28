@@ -21,7 +21,13 @@ describe('<Select />', () => {
     )
   })
 
-  it('renders without crashing', () => {
-    expect(wrapper.find('.c-Select')).toBePresent()
+  describe('Renders...', () => {
+    it('without crashing', () => {
+      expect(wrapper.find('.c-Select')).toBePresent()
+    })
+
+    it('matches its snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 })

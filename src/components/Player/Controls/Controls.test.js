@@ -37,7 +37,13 @@ describe('<Controls />', () => {
     )
   })
 
-  it('renders without crashing', () => {
-    expect(wrapper.find('.c-Controls')).toBePresent()
+  describe('Renders...', () => {
+    it('without crashing', () => {
+      expect(wrapper.find('.c-Controls')).toBePresent()
+    })
+
+    it('matches its snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 })

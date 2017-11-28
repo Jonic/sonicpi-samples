@@ -19,7 +19,13 @@ describe('<PlayStop />', () => {
     )
   })
 
-  it('renders without crashing', () => {
-    expect(wrapper.find('.c-PlayStop')).toBePresent()
+  describe('Renders...', () => {
+    it('without crashing', () => {
+      expect(wrapper.find('.c-PlayStop')).toBePresent()
+    })
+
+    it('matches its snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 })

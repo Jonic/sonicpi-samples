@@ -21,7 +21,13 @@ describe('<SampleSelector />', () => {
     )
   })
 
-  it('renders without crashing', () => {
-    expect(wrapper.find('.c-SampleSelector')).toBePresent()
+  describe('Renders...', () => {
+    it('without crashing', () => {
+      expect(wrapper.find('.c-SampleSelector')).toBePresent()
+    })
+
+    it('matches its snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 })
