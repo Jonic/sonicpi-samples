@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
-
-import Player from './Player/Player'
-
-import { trackPageView } from '../helpers/Analytics'
-
 import './App.css'
+import { trackPageView } from '../helpers/Analytics'
+import Player from './Player/Player'
+import React, { Component } from 'react'
 
 class App extends Component {
   constructor() {
@@ -36,7 +33,7 @@ class App extends Component {
         <h1 className="c-App__title">
           Sonic Pi Samples
         </h1>
-
+        {' '}
         <Player
           isLoading={this.state.isLoading}
           toggleIsLoading={this.toggleIsLoading}
