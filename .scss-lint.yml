@@ -11,6 +11,8 @@ linters:
     enabled: false
   DisableLinterReason:
     enabled: true
+  EmptyRule:
+    enabled: false
   ExtendDirective:
     enabled: true
   LengthVariable:
