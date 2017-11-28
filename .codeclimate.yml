@@ -1,0 +1,20 @@
+---
+engines:
+  eslint:
+    enabled: false
+    channel: "eslint-3"
+    config:
+      ignore_warnings: true
+  scss-lint:
+    enabled: true
+exclude_paths: []
+ratings:
+  paths:
+    - "**.inc"
+    - "**.js"
+    - "**.jsx"
+    - "**.module"
+    - "**.php"
+    - "**.py"
+    - "**.rb"
+    - "**.scss"
