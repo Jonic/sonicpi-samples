@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "audio/*": ["./audio/*"],
+      "components/*": ["./components/*"],
+      "config/*": ["./config/*"],
+      "contexts/*": ["./contexts/*"],
+      "helpers/*": ["./helpers/*"],
+      "styles/*": ["./styles/*"]
+    }
+  }
+}
