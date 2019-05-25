@@ -3,7 +3,6 @@ import './Player.scss'
 import Audio from './Audio/Audio'
 import Controls from './Controls/Controls'
 import Debug from './Debug/Debug'
-// import Visualizer from './Visualizer/Visualizer'
 import { PlayerContextProvider } from 'contexts/Player'
 import React from 'react'
 
@@ -17,8 +16,6 @@ const Player = () => (
       <section className="c-player__controls">
         <Controls />
       </section>
-
-      <section className="c-player__visualizer">{/* <Visualizer /> */}</section>
 
       <Audio />
     </div>

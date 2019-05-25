@@ -16,5 +16,6 @@ exports[`<App /> Renders... matches its snapshot 1`] = `
       <Player />
     </section>
   </main>
+  <Visualizer />
 </AppContextProvider>
 `;

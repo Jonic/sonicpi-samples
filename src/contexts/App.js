@@ -10,12 +10,15 @@ const AppContext = React.createContext({
 
 const AppContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true)
+  const [visData, setVisData] = useState(new Uint8Array())
 
   useEffect(() => trackPageView(), [])
 
   const contextValue = {
     isLoading,
     setIsLoading,
+    setVisData,
+    visData,
   }
 
   return (

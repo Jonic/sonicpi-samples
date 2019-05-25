@@ -15,9 +15,6 @@ exports[`<Player /> Renders... matches its snapshot 1`] = `
     >
       <Controls />
     </section>
-    <section
-      className="c-player__visualizer"
-    />
     <Audio />
   </div>
 </PlayerContextProvider>

@@ -3,12 +3,13 @@ import './Audio.scss'
 import React, { useContext, useEffect, useRef, useState } from 'react'
 
 import AppContext from 'contexts/App'
+import { AudioAnalyserHelperInit } from 'helpers/AudioAnalyser'
 import PlayerContext from 'contexts/Player'
 import audioConfig from 'config/audio'
 import { trackPlay } from 'helpers/Analytics'
 
 const Audio = () => {
-  const { setIsLoading } = useContext(AppContext)
+  const { setIsLoading, setVisData } = useContext(AppContext)
   const { currentSample, isLooping, isPlaying, setIsPlaying } = useContext(
     PlayerContext,
   )
@@ -18,7 +19,8 @@ const Audio = () => {
 
   useEffect(() => {
     setIsLoading(false)
-  }, [audioElement, setIsLoading])
+    AudioAnalyserHelperInit(audioElement.current, setVisData)
+  }, [audioElement, setIsLoading, setVisData])
 
   useEffect(() => {
     setAudioSource(

@@ -4,6 +4,7 @@ import AppContext, { AppContextProvider } from 'contexts/App'
 import React, { useContext } from 'react'
 
 import Player from './Player/Player'
+import Visualizer from './Visualizer/Visualizer'
 import classnames from 'classnames'
 
 const App = () => {
@@ -19,6 +20,8 @@ const App = () => {
           <Player />
         </section>
       </main>
+
+      <Visualizer />
     </AppContextProvider>
   )
 }
