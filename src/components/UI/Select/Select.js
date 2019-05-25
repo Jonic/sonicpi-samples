@@ -4,27 +4,23 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import classnames from 'classnames'
 
-const Select = props => {
-  const { className, options, onChange, value, disabled } = props
-
-  return (
-    // eslint-disable-next-line jsx-a11y/no-onchange
-    <select
-      className={classnames('c-select', className)}
-      disabled={disabled}
-      onChange={event => onChange(event.target.value)}
-      value={value}
-    >
-      {options.map((option, index) => {
-        return (
-          <option key={index} value={option}>
-            {option}
-          </option>
-        )
-      })}
-    </select>
-  )
-}
+const Select = ({ className, disabled, onChange, options, value }) => (
+  // eslint-disable-next-line jsx-a11y/no-onchange
+  <select
+    className={classnames('c-select', className)}
+    disabled={disabled}
+    onChange={event => onChange(event.target.value)}
+    value={value}
+  >
+    {options.map((option, index) => {
+      return (
+        <option key={index} value={option}>
+          {option}
+        </option>
+      )
+    })}
+  </select>
+)
 
 Select.propTypes = {
   className: PropTypes.string,

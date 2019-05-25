@@ -6,7 +6,7 @@ exports[`<PlayStop /> Renders... matches its snapshot 1`] = `
 >
   <button
     className="c-play-stop__button"
-    disabled={false}
+    disabled={true}
     onClick={[Function]}
   >
     Play

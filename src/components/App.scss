@@ -49,9 +49,9 @@ $app-padding: 3vw;
   animation-timing-function: $app-transition-timing-function;
   background-color: $app-background-color;
   color: $app-color;
-  height: 100vh;
+  height: 100%;
   padding: $app-padding;
-  width: 100vw;
+  width: 100%;
 }
 
 $app-title-font-size: 10vw;

@@ -1,16 +1,16 @@
 import './SampleSelector.scss'
 
-import PropTypes from 'prop-types'
-import React from 'react'
-import Select from '../../../UI/Select/Select'
+import React, { useContext } from 'react'
 
-const SampleSelector = props => {
-  const {
-    currentSample,
-    filteredSamples,
-    isLoading,
-    sampleSelectorChangeHandler,
-  } = props
+import AppContext from 'contexts/App'
+import PlayerContext from 'contexts/Player'
+import Select from 'components/UI/Select/Select'
+
+const SampleSelector = () => {
+  const { isLoading } = useContext(AppContext)
+  const { currentSample, filteredSamples, setCurrentSample } = useContext(
+    PlayerContext,
+  )
 
   return (
     <div className="c-sample-selector">
@@ -18,19 +18,12 @@ const SampleSelector = props => {
       <Select
         className="c-sample-selector__select"
         disabled={isLoading}
-        onChange={sampleSelectorChangeHandler}
+        onChange={value => setCurrentSample(value)}
         options={filteredSamples}
         value={currentSample}
       />
     </div>
   )
-}
-
-SampleSelector.propTypes = {
-  currentSample: PropTypes.string.isRequired,
-  filteredSamples: PropTypes.array.isRequired,
-  isLoading: PropTypes.bool.isRequired,
-  sampleSelectorChangeHandler: PropTypes.func.isRequired,
 }
 
 export default SampleSelector

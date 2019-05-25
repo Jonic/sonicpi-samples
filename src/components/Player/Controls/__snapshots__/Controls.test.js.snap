@@ -4,29 +4,9 @@ exports[`<Controls /> Renders... matches its snapshot 1`] = `
 <div
   className="c-controls"
 >
-  <CategorySelector
-    categories={Array []}
-    categorySelectorChangeHandler={[MockFunction]}
-    currentCategory=""
-    isLoading={false}
-    updateIsLoading={[MockFunction]}
-  />
-  <SampleSelector
-    currentSample=""
-    filteredSamples={Array []}
-    isLoading={false}
-    sampleSelectorChangeHandler={[MockFunction]}
-    updateIsLoading={[MockFunction]}
-  />
-  <LoopCheckbox
-    isLoading={false}
-    isLooping={false}
-    loopCheckboxClickHandler={[MockFunction]}
-  />
-  <PlayStop
-    isLoading={false}
-    isPlaying={false}
-    playStopClickHandler={[MockFunction]}
-  />
+  <CategorySelector />
+  <SampleSelector />
+  <LoopCheckbox />
+  <PlayStop />
 </div>
 `;

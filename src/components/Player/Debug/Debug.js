@@ -1,10 +1,13 @@
 import './Debug.scss'
 
-import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useContext } from 'react'
 
-const Debug = props => {
-  const { currentCategory, currentSample, isLooping, isPlaying } = props
+import PlayerContext from 'contexts/Player'
+
+const Debug = () => {
+  const { currentCategory, currentSample, isLooping, isPlaying } = useContext(
+    PlayerContext,
+  )
 
   return (
     <div className="c-debug">
@@ -22,13 +25,6 @@ const Debug = props => {
       </ul>
     </div>
   )
-}
-
-Debug.propTypes = {
-  currentCategory: PropTypes.string.isRequired,
-  currentSample: PropTypes.string.isRequired,
-  isLooping: PropTypes.bool.isRequired,
-  isPlaying: PropTypes.bool.isRequired,
 }
 
 export default Debug

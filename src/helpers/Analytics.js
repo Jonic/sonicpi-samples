@@ -1,5 +1,5 @@
 import ReactGA from 'react-ga'
-import config from '../config/analytics'
+import config from 'config/analytics'
 
 const init = () => {
   console.log('Analytics#init') // eslint-disable-line no-console

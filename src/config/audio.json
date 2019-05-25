@@ -1,3 +1,6 @@
 {
-  "mp3_source_directory": "audio/mp3"
+  "source": {
+    "flac": "audio/flac",
+    "mp3": "audio/mp3"
+  }
 }

@@ -1,36 +1,29 @@
 import './PlayStop.scss'
 
-import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useContext } from 'react'
 
-const PlayStop = props => {
-  const { isLoading, isPlaying, playStopClickHandler } = props
+import AppContext from 'contexts/App'
+import PlayerContext from 'contexts/Player'
+
+const PlayStop = () => {
+  const { isLoading } = useContext(AppContext)
+  const { isPlaying, setIsPlaying } = useContext(PlayerContext)
 
   const determineLabel = () => {
     return isPlaying ? 'Stop' : 'Play'
-  }
-
-  const handleClick = () => {
-    playStopClickHandler()
   }
 
   return (
     <div className="c-play-stop">
       <button
         className="c-play-stop__button"
-        onClick={handleClick}
+        onClick={() => setIsPlaying(!isPlaying)}
         disabled={isLoading}
       >
         {determineLabel()}
       </button>
     </div>
   )
-}
-
-PlayStop.propTypes = {
-  isLoading: PropTypes.bool.isRequired,
-  isPlaying: PropTypes.bool.isRequired,
-  playStopClickHandler: PropTypes.func.isRequired,
 }
 
 export default PlayStop

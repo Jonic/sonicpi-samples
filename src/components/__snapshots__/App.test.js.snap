@@ -1,19 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<App /> Renders... matches its snapshot 1`] = `
-<div
-  className="c-app"
->
-  <h1
-    className="c-app__title"
+<AppContextProvider>
+  <main
+    className="c-app c-app--is-loading"
   >
-    Sonic Pi Samples
-  </h1>
-   
-  <Player
-    isLoading={false}
-    toggleIsLoading={[Function]}
-    updateIsLoading={[Function]}
-  />
-</div>
+    <h1
+      className="c-app__title"
+    >
+      Sonic Pi Samples
+    </h1>
+    <section
+      className="c-app__player"
+    >
+      <Player />
+    </section>
+  </main>
+</AppContextProvider>
 `;

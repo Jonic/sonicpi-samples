@@ -2,8 +2,6 @@ import './Visualizer.scss'
 
 import React, { Component } from 'react'
 
-import PropTypes from 'prop-types'
-
 class Visualizer extends Component {
   constructor(props) {
     super(props)
@@ -74,12 +72,6 @@ class Visualizer extends Component {
       />
     )
   }
-}
-
-Visualizer.propTypes = {
-  bufferLength: PropTypes.number.isRequired,
-  isPlaying: PropTypes.bool.isRequired,
-  visData: PropTypes.object,
 }
 
 export default Visualizer
