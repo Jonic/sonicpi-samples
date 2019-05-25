@@ -4,8 +4,8 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 $breakpoints: (
-  sm: "screen and (min-width: #{$breakpoint-sm})",
-  md: "screen and (min-width: #{$breakpoint-md})",
-  lg: "screen and (min-width: #{$breakpoint-lg})",
-  xl: "screen and (min-width: #{$breakpoint-xl})"
+  sm: 'screen and (min-width: #{$breakpoint-sm})',
+  md: 'screen and (min-width: #{$breakpoint-md})',
+  lg: 'screen and (min-width: #{$breakpoint-lg})',
+  xl: 'screen and (min-width: #{$breakpoint-xl})',
 );

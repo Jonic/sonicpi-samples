@@ -1,9 +1,9 @@
-$iota-utils-position-res:           true;
-$iota-utils-position-breakpoints:   $iota-global-breakpoints;
-$iota-utils-position-namespace:     '';
+$iota-utils-position-res: true;
+$iota-utils-position-breakpoints: $iota-global-breakpoints;
+$iota-utils-position-namespace: '';
 $iota-utils-position-absolute-name: 'absolute';
-$iota-utils-position-fixed-name:    'fixed';
+$iota-utils-position-fixed-name: 'fixed';
 $iota-utils-position-relative-name: 'relative';
-$iota-utils-position-static-name:   'static';
+$iota-utils-position-static-name: 'static';
 
 @import 'node_modules/iotacss/utilities/position';

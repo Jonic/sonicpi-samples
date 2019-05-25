@@ -9,36 +9,42 @@ h6 {
 
 @mixin type-base {
   @include iota-type($type-base);
-  font-weight:   map-get($type-font-weights, base);
+
+  font-weight: map-get($type-font-weights, base);
   margin-bottom: map-get($type-margins, -base);
 }
 
 @mixin type-display-large {
   @include iota-type($type-display-large);
-  font-weight:   map-get($type-font-weights, display-large);
+
+  font-weight: map-get($type-font-weights, display-large);
   margin-bottom: map-get($type-margins, -display-large);
 }
 
 @mixin type-display {
   @include iota-type($type-display);
-  font-weight:   map-get($type-font-weights, display);
+
+  font-weight: map-get($type-font-weights, display);
   margin-bottom: map-get($type-margins, -display);
 }
 
 @mixin type-heading {
   @include iota-type($type-heading);
-  font-weight:   map-get($type-font-weights, heading);
+
+  font-weight: map-get($type-font-weights, heading);
   margin-bottom: map-get($type-margins, -heading);
 }
 
 @mixin type-sub-heading {
   @include iota-type($type-sub-heading);
-  font-weight:   map-get($type-font-weights, sub-heading);
+
+  font-weight: map-get($type-font-weights, sub-heading);
   margin-bottom: map-get($type-margins, -sub-heading);
 }
 
 @mixin type-caption {
   @include iota-type($type-caption);
-  font-weight:   map-get($type-font-weights, caption);
+
+  font-weight: map-get($type-font-weights, caption);
   margin-bottom: map-get($type-margins, -caption);
 }

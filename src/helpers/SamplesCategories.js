@@ -1,21 +1,21 @@
-import samples from "../config/samples";
+import samples from '../config/samples'
 
 const getSamplesForCategory = category => {
-  if (category === "all") {
-    return samples;
+  if (category === 'all') {
+    return samples
   }
 
-  let filteredSamples = [];
+  let filteredSamples = []
 
   samples.map(sample => {
     if (sample.startsWith(category)) {
-      filteredSamples.push(sample);
+      filteredSamples.push(sample)
     }
 
-    return null;
-  });
+    return null
+  })
 
-  return filteredSamples;
-};
+  return filteredSamples
+}
 
-export { getSamplesForCategory };
+export { getSamplesForCategory }

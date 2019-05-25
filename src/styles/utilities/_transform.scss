@@ -1,8 +1,8 @@
-$iota-utils-transform-res:             true;
-$iota-utils-transform-breakpoints:     $iota-global-breakpoints;
-$iota-utils-transform-namespace:       '';
+$iota-utils-transform-res: true;
+$iota-utils-transform-breakpoints: $iota-global-breakpoints;
+$iota-utils-transform-namespace: '';
 $iota-utils-transform-capitalize-name: 'capitalize';
-$iota-utils-transform-uppercase-name:  'uppercase';
-$iota-utils-transform-lowercase-name:  'lowercase';
+$iota-utils-transform-uppercase-name: 'uppercase';
+$iota-utils-transform-lowercase-name: 'lowercase';
 
 @import 'node_modules/iotacss/utilities/transform';

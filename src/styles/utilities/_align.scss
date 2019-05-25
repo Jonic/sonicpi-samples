@@ -1,9 +1,9 @@
-$iota-utils-align-res:           true;
-$iota-utils-align-breakpoints:   $iota-global-breakpoints;
-$iota-utils-align-namespace:     'align-';
-$iota-utils-align-top-name:      'top';
-$iota-utils-align-bottom-name:   'bottom';
-$iota-utils-align-middle-name:   'middle';
+$iota-utils-align-res: true;
+$iota-utils-align-breakpoints: $iota-global-breakpoints;
+$iota-utils-align-namespace: 'align-';
+$iota-utils-align-top-name: 'top';
+$iota-utils-align-bottom-name: 'bottom';
+$iota-utils-align-middle-name: 'middle';
 $iota-utils-align-baseline-name: 'baseline';
 
 @import 'node_modules/iotacss/utilities/align';
