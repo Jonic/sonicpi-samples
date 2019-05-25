@@ -1,5 +1,3 @@
-import React from 'react'
-import { shallow } from 'enzyme'
 import Select from './Select'
 
 const options = []
@@ -17,13 +15,13 @@ describe('<Select />', () => {
         onChange={onChange}
         value={value}
         disabled={disabled}
-      />
+      />,
     )
   })
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-select')).toBePresent()
+      expect(wrapper.find('.c-select')).toExist()
     })
 
     it('matches its snapshot', () => {

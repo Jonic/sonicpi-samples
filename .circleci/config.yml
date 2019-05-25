@@ -4,7 +4,7 @@ dependencies:
     - chmod +x ./cc-test-reporter
 machine:
   node:
-    version: 8.9.0
+    version: 10.15.3
 test:
   override:
     - npm test -- --coverage; ./cc-test-reporter after-build --exit-code $?

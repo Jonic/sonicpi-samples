@@ -9,7 +9,7 @@ exports[`<CategorySelector /> Renders... matches its snapshot 1`] = `
   <Select
     className="c-category-selector__select"
     disabled={false}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     options={Array []}
     value=""
   />

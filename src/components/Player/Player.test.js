@@ -1,8 +1,6 @@
-import { shallow } from 'enzyme'
-import categories from '../../_config/categories'
 import Player from './Player'
-import React from 'react'
-import samples from '../../_config/samples'
+import categories from '../../config/categories'
+import samples from '../../config/samples'
 
 const isLoading = false
 const toggleIsLoading = jest.fn()
@@ -17,13 +15,13 @@ describe('<Player />', () => {
         isLoading={isLoading}
         toggleIsLoading={toggleIsLoading}
         updateIsLoading={updateIsLoading}
-      />
+      />,
     )
   })
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-player')).toBePresent()
+      expect(wrapper.find('.c-player')).toExist()
     })
 
     it('matches its snapshot', () => {
@@ -55,11 +53,7 @@ describe('<Player />', () => {
       describe('when user selects "sn"', () => {
         it('sets state correctly', () => {
           let category = 'sn'
-          let filteredSamples = [
-            'sn_dolf',
-            'sn_dub',
-            'sn_zome',
-          ]
+          let filteredSamples = ['sn_dolf', 'sn_dub', 'sn_zome']
           let expectedCurrentCategory = category
           let expectedCurrentSample = filteredSamples[0]
           let expectedFilteredSamples = filteredSamples

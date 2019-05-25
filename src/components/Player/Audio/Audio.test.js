@@ -1,9 +1,8 @@
-jest.mock('../../../helpers/Analytics')
-
 import 'web-audio-test-api'
-import { shallow } from 'enzyme'
+
 import Audio from './Audio'
-import React from 'react'
+
+jest.mock('../../../helpers/Analytics')
 
 const currentSample = ''
 const isLooping = false
@@ -27,13 +26,13 @@ xdescribe('<Audio />', () => {
         updateIsLoading={updateIsLoading}
         updateBufferLength={updateBufferLength}
         updateVisData={updateVisData}
-      />
+      />,
     )
   })
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-audio')).toBePresent()
+      expect(wrapper.find('.c-audio')).toExist()
     })
 
     it('matches its snapshot', () => {

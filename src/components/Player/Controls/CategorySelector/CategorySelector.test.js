@@ -1,5 +1,3 @@
-import React from 'react'
-import { shallow } from 'enzyme'
 import CategorySelector from './CategorySelector'
 
 const categories = []
@@ -17,13 +15,13 @@ describe('<CategorySelector />', () => {
         categorySelectorChangeHandler={categorySelectorChangeHandler}
         currentCategory={currentCategory}
         isLoading={isLoading}
-      />
+      />,
     )
   })
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-category-selector')).toBePresent()
+      expect(wrapper.find('.c-category-selector')).toExist()
     })
 
     it('matches its snapshot', () => {

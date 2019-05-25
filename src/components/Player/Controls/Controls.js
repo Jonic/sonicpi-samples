@@ -1,4 +1,5 @@
-import './Controls.css'
+import './Controls.scss'
+
 import CategorySelector from './CategorySelector/CategorySelector'
 import LoopCheckbox from './LoopCheckbox/LoopCheckbox'
 import PlayStop from './PlayStop/PlayStop'
@@ -49,25 +50,25 @@ const Controls = props => {
       <PlayStop
         isLoading={isLoading}
         isPlaying={isPlaying}
-        playStopClickHandler= {playStopClickHandler}
+        playStopClickHandler={playStopClickHandler}
       />
     </div>
   )
 }
 
 Controls.propTypes = {
-  categories:                    PropTypes.array.isRequired,
+  categories: PropTypes.array.isRequired,
   categorySelectorChangeHandler: PropTypes.func.isRequired,
-  currentCategory:               PropTypes.string.isRequired,
-  currentSample:                 PropTypes.string.isRequired,
-  filteredSamples:               PropTypes.array.isRequired,
-  isLoading:                     PropTypes.bool.isRequired,
-  isLooping:                     PropTypes.bool.isRequired,
-  isPlaying:                     PropTypes.bool.isRequired,
-  loopCheckboxClickHandler:      PropTypes.func.isRequired,
-  playStopClickHandler:          PropTypes.func.isRequired,
-  sampleSelectorChangeHandler:   PropTypes.func.isRequired,
-  updateIsLoading:               PropTypes.func.isRequired,
+  currentCategory: PropTypes.string.isRequired,
+  currentSample: PropTypes.string.isRequired,
+  filteredSamples: PropTypes.array.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  isLooping: PropTypes.bool.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
+  loopCheckboxClickHandler: PropTypes.func.isRequired,
+  playStopClickHandler: PropTypes.func.isRequired,
+  sampleSelectorChangeHandler: PropTypes.func.isRequired,
+  updateIsLoading: PropTypes.func.isRequired,
 }
 
 export default Controls

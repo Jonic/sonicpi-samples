@@ -1,8 +1,10 @@
-import './Audio.css'
-import { trackPlay } from '../../../helpers/Analytics'
-import config from '../../../_config/audio'
-import PropTypes from 'prop-types'
+import './Audio.scss'
+
 import React, { Component } from 'react'
+
+import PropTypes from 'prop-types'
+import config from '../../../config/audio'
+import { trackPlay } from '../../../helpers/Analytics'
 
 class Audio extends Component {
   componentDidMount() {
@@ -47,7 +49,8 @@ class Audio extends Component {
     return `${this.audioSourceDirectory()}/${this.props.currentSample}.mp3`
   }
 
-  audioSourceDirectory = () => `${process.env.PUBLIC_URL}/${config.mp3_source_directory}`
+  audioSourceDirectory = () =>
+    `${process.env.PUBLIC_URL}/${config.mp3_source_directory}`
 
   play = () => {
     trackPlay(this.props.currentSample)
@@ -94,13 +97,13 @@ class Audio extends Component {
 }
 
 Audio.propTypes = {
-  currentSample:      PropTypes.string.isRequired,
-  isLooping:          PropTypes.bool.isRequired,
-  isPlaying:          PropTypes.bool.isRequired,
+  currentSample: PropTypes.string.isRequired,
+  isLooping: PropTypes.bool.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
   sampleEndedHandler: PropTypes.func.isRequired,
-  updateIsLoading:    PropTypes.func.isRequired,
+  updateIsLoading: PropTypes.func.isRequired,
   updateBufferLength: PropTypes.func.isRequired,
-  updateVisData:      PropTypes.func.isRequired,
+  updateVisData: PropTypes.func.isRequired,
 }
 
 export default Audio

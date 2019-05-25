@@ -1,5 +1,3 @@
-import React from 'react'
-import { shallow } from 'enzyme'
 import Debug from './Debug'
 
 const currentCategory = ''
@@ -17,13 +15,13 @@ describe('<Debug />', () => {
         currentSample={currentSample}
         isLooping={isLooping}
         isPlaying={isPlaying}
-      />
+      />,
     )
   })
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-debug')).toBePresent()
+      expect(wrapper.find('.c-debug')).toExist()
     })
 
     it('matches its snapshot', () => {

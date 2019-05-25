@@ -172,7 +172,7 @@ exports[`<Player /> Renders... matches its snapshot 1`] = `
     loopCheckboxClickHandler={[Function]}
     playStopClickHandler={[Function]}
     sampleSelectorChangeHandler={[Function]}
-    updateIsLoading={[Function]}
+    updateIsLoading={[MockFunction]}
   />
   <Audio
     currentSample="ambi_choir"
@@ -180,13 +180,8 @@ exports[`<Player /> Renders... matches its snapshot 1`] = `
     isPlaying={false}
     sampleEndedHandler={[Function]}
     updateBufferLength={[Function]}
-    updateIsLoading={[Function]}
+    updateIsLoading={[MockFunction]}
     updateVisData={[Function]}
-  />
-  <Visualizer
-    bufferLength={0}
-    isPlaying={false}
-    visData={null}
   />
 </div>
 `;

@@ -1,30 +1,29 @@
-import ReactGA from 'react-ga'
-
-import config from '../_config/analytics'
+import ReactGA from "react-ga";
+import config from "../config/analytics";
 
 const init = () => {
-  console.log('Analytics#init') // eslint-disable-line no-console
+  console.log("Analytics#init"); // eslint-disable-line no-console
 
-  ReactGA.initialize(config.id)
-}
+  ReactGA.initialize(config.id);
+};
 
 const trackPageView = () => {
-  console.log('Analytics#trackPageView') // eslint-disable-line no-console
+  console.log("Analytics#trackPageView"); // eslint-disable-line no-console
 
-  ReactGA.set({ page: window.location.pathname })
-  ReactGA.pageview(window.location.pathname)
-}
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+};
 
 const trackPlay = sample => {
   const event = {
-    category: 'Audio',
-    action:   'Sample Played',
-    label:    sample,
-  }
+    category: "Audio",
+    action: "Sample Played",
+    label: sample
+  };
 
-  console.log('Analytics#trackPlay', event) // eslint-disable-line no-console
+  console.log("Analytics#trackPlay", event); // eslint-disable-line no-console
 
-  ReactGA.event(event)
-}
+  ReactGA.event(event);
+};
 
-export { init, trackPageView, trackPlay }
+export { init, trackPageView, trackPlay };

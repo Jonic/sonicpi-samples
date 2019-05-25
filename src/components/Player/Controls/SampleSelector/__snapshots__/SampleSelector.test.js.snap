@@ -9,7 +9,7 @@ exports[`<SampleSelector /> Renders... matches its snapshot 1`] = `
   <Select
     className="c-sample-selector__select"
     disabled={false}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     options={Array []}
     value=""
   />

@@ -7,8 +7,8 @@ exports[`<LoopCheckbox /> Renders... matches its snapshot 1`] = `
   Loop Sample:
    
   <input
-    checked={false}
     className="c-LoopCheckbox__input"
+    defaultChecked={false}
     disabled={false}
     onClick={[Function]}
     type="checkbox"

@@ -1,21 +1,10 @@
-import './LoopCheckbox.css'
+import './LoopCheckbox.scss'
+
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const LoopCheckbox = (props) => {
-  const {
-    isLoading,
-    isLooping,
-    loopCheckboxClickHandler,
-  } = props
-
-  const determineChecked = () => {
-    if (isLooping) {
-      return 'checked'
-    }
-
-    return false
-  }
+const LoopCheckbox = props => {
+  const { isLoading, isLooping, loopCheckboxClickHandler } = props
 
   const handleClick = () => {
     loopCheckboxClickHandler()
@@ -23,10 +12,9 @@ const LoopCheckbox = (props) => {
 
   return (
     <div className="c-loop-checkbox">
-      Loop Sample:
-      {' '}
+      Loop Sample:{' '}
       <input
-        checked={determineChecked()}
+        defaultChecked={isLooping}
         className="c-LoopCheckbox__input"
         disabled={isLoading}
         onClick={handleClick}
@@ -37,8 +25,8 @@ const LoopCheckbox = (props) => {
 }
 
 LoopCheckbox.propTypes = {
-  isLoading:                PropTypes.bool.isRequired,
-  isLooping:                PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  isLooping: PropTypes.bool.isRequired,
   loopCheckboxClickHandler: PropTypes.func.isRequired,
 }
 

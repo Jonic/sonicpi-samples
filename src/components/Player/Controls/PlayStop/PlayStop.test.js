@@ -1,5 +1,3 @@
-import React from 'react'
-import { shallow } from 'enzyme'
 import PlayStop from './PlayStop'
 
 const isLoading = false
@@ -15,13 +13,13 @@ describe('<PlayStop />', () => {
         isLoading={isLoading}
         isPlaying={isPlaying}
         playStopClickHandler={playStopClickHandler}
-      />
+      />,
     )
   })
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-play-stop')).toBePresent()
+      expect(wrapper.find('.c-play-stop')).toExist()
     })
 
     it('matches its snapshot', () => {

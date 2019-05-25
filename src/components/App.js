@@ -1,7 +1,9 @@
-import './App.css'
-import { trackPageView } from '../helpers/Analytics'
-import Player from './Player/Player'
+import './App.scss'
+
 import React, { Component } from 'react'
+
+import Player from './Player/Player'
+import { trackPageView } from '../helpers/Analytics'
 
 class App extends Component {
   constructor() {
@@ -21,7 +23,7 @@ class App extends Component {
     this.updateIsLoading(newState)
   }
 
-  updateIsLoading = (newState) => {
+  updateIsLoading = newState => {
     this.setState({
       isLoading: newState,
     })
@@ -30,10 +32,7 @@ class App extends Component {
   render() {
     return (
       <div className="c-app">
-        <h1 className="c-app__title">
-          Sonic Pi Samples
-        </h1>
-        {' '}
+        <h1 className="c-app__title">Sonic Pi Samples</h1>{' '}
         <Player
           isLoading={this.state.isLoading}
           toggleIsLoading={this.toggleIsLoading}

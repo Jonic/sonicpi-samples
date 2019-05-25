@@ -6,27 +6,27 @@ exports[`<Controls /> Renders... matches its snapshot 1`] = `
 >
   <CategorySelector
     categories={Array []}
-    categorySelectorChangeHandler={[Function]}
+    categorySelectorChangeHandler={[MockFunction]}
     currentCategory=""
     isLoading={false}
-    updateIsLoading={[Function]}
+    updateIsLoading={[MockFunction]}
   />
   <SampleSelector
     currentSample=""
     filteredSamples={Array []}
     isLoading={false}
-    sampleSelectorChangeHandler={[Function]}
-    updateIsLoading={[Function]}
+    sampleSelectorChangeHandler={[MockFunction]}
+    updateIsLoading={[MockFunction]}
   />
   <LoopCheckbox
     isLoading={false}
     isLooping={false}
-    loopCheckboxClickHandler={[Function]}
+    loopCheckboxClickHandler={[MockFunction]}
   />
   <PlayStop
     isLoading={false}
     isPlaying={false}
-    playStopClickHandler={[Function]}
+    playStopClickHandler={[MockFunction]}
   />
 </div>
 `;

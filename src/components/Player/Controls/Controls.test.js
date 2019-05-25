@@ -1,5 +1,3 @@
-import React from 'react'
-import { shallow } from 'enzyme'
 import Controls from './Controls'
 
 const categories = []
@@ -33,13 +31,13 @@ describe('<Controls />', () => {
         playStopClickHandler={playStopClickHandler}
         sampleSelectorChangeHandler={sampleSelectorChangeHandler}
         updateIsLoading={updateIsLoading}
-      />
+      />,
     )
   })
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-controls')).toBePresent()
+      expect(wrapper.find('.c-controls')).toExist()
     })
 
     it('matches its snapshot', () => {

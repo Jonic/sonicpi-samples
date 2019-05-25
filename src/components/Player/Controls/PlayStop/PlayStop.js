@@ -1,13 +1,10 @@
-import './PlayStop.css'
+import './PlayStop.scss'
+
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const PlayStop = (props) => {
-  const {
-    isLoading,
-    isPlaying,
-    playStopClickHandler,
-  } = props
+const PlayStop = props => {
+  const { isLoading, isPlaying, playStopClickHandler } = props
 
   const determineLabel = () => {
     return isPlaying ? 'Stop' : 'Play'
@@ -31,8 +28,8 @@ const PlayStop = (props) => {
 }
 
 PlayStop.propTypes = {
-  isLoading:            PropTypes.bool.isRequired,
-  isPlaying:            PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
   playStopClickHandler: PropTypes.func.isRequired,
 }
 

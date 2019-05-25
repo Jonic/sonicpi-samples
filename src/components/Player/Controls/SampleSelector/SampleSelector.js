@@ -1,9 +1,10 @@
-import './SampleSelector.css'
+import './SampleSelector.scss'
+
 import PropTypes from 'prop-types'
 import React from 'react'
 import Select from '../../../UI/Select/Select'
 
-const SampleSelector = (props) => {
+const SampleSelector = props => {
   const {
     currentSample,
     filteredSamples,
@@ -13,8 +14,7 @@ const SampleSelector = (props) => {
 
   return (
     <div className="c-sample-selector">
-      Sample Selector:
-      {' '}
+      Sample Selector:{' '}
       <Select
         className="c-sample-selector__select"
         disabled={isLoading}
@@ -27,9 +27,9 @@ const SampleSelector = (props) => {
 }
 
 SampleSelector.propTypes = {
-  currentSample:               PropTypes.string.isRequired,
-  filteredSamples:             PropTypes.array.isRequired,
-  isLoading:                   PropTypes.bool.isRequired,
+  currentSample: PropTypes.string.isRequired,
+  filteredSamples: PropTypes.array.isRequired,
+  isLoading: PropTypes.bool.isRequired,
   sampleSelectorChangeHandler: PropTypes.func.isRequired,
 }
 

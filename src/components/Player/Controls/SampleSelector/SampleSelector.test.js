@@ -1,5 +1,3 @@
-import React from 'react'
-import { shallow } from 'enzyme'
 import SampleSelector from './SampleSelector'
 
 const currentSample = ''
@@ -17,13 +15,13 @@ describe('<SampleSelector />', () => {
         filteredSamples={filteredSamples}
         isLoading={isLoading}
         sampleSelectorChangeHandler={sampleSelectorChangeHandler}
-      />
+      />,
     )
   })
 
   describe('Renders...', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-sample-selector')).toBePresent()
+      expect(wrapper.find('.c-sample-selector')).toExist()
     })
 
     it('matches its snapshot', () => {

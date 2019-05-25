@@ -1,28 +1,30 @@
-import './Player.css'
-import { getSamplesForCategory } from '../../helpers/SamplesCategories'
+import './Player.scss'
+
+import React, { Component } from 'react'
+
 import Audio from './Audio/Audio'
-import categories from '../../_config/categories'
 import Controls from './Controls/Controls'
 import Debug from './Debug/Debug'
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import samples from '../../_config/samples'
-import Visualizer from './Visualizer/Visualizer'
+// import Visualizer from './Visualizer/Visualizer'
+import categories from '../../config/categories'
+import { getSamplesForCategory } from '../../helpers/SamplesCategories'
+import samples from '../../config/samples'
 
 class Player extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      bufferLength:    0,
-      categories:      categories,
+      bufferLength: 0,
+      categories: categories,
       currentCategory: categories[0],
-      currentSample:   samples[0],
+      currentSample: samples[0],
       filteredSamples: samples,
-      isLooping:       false,
-      isPlaying:       false,
-      samples:         samples,
-      visData:         null,
+      isLooping: false,
+      isPlaying: false,
+      samples: samples,
+      visData: null,
     }
   }
 
@@ -31,9 +33,9 @@ class Player extends Component {
 
     this.setState({
       currentCategory: category,
-      currentSample:   filteredSamples[0],
+      currentSample: filteredSamples[0],
       filteredSamples: filteredSamples,
-      isPlaying:       false,
+      isPlaying: false,
     })
   }
 
@@ -58,7 +60,7 @@ class Player extends Component {
   sampleSelectorChangeHandler = sample => {
     this.setState({
       currentSample: sample,
-      isPlaying:     false,
+      isPlaying: false,
     })
   }
 
@@ -110,18 +112,18 @@ class Player extends Component {
           updateVisData={this.updateVisData}
         />
 
-        <Visualizer
+        {/* <Visualizer
           bufferLength={this.state.bufferLength}
           isPlaying={this.state.isPlaying}
           visData={this.state.visData}
-        />
+        /> */}
       </div>
     )
   }
 }
 
 Player.propTypes = {
-  isLoading:       PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired,
   updateIsLoading: PropTypes.func.isRequired,
 }
 
