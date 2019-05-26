@@ -32,7 +32,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "build": "npm install --force && node-sass-chokidar src/ -o src/ && react-scripts build",
-    "coverage": "react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/**/*js --collectCoverageFrom=!src/*.js",
+    "coverage": "npm run build-css && react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/**/*js --collectCoverageFrom=!src/*.js",
     "deploy": "gh-pages -d build",
     "dev": "npm-run-all -p watch-css start",
     "eject": "react-scripts eject",
