@@ -1,7 +1,15 @@
 {
   "name": "sonicpi-samples",
+  "description": "Preview samples from Sonic Pi",
   "version": "0.2.0",
   "private": true,
+  "repository": "https://www.github.com/jonic/sonicpi-samples",
+  "bugs": "https://www.github.com/jonic/sonicpi-samples/issues",
+  "author": "Jonic Linley <jonic@100yen.co.uk>",
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://spdx.org/licenses/MIT.html"
+  }],
   "homepage": "https://sonicpisamples.100yen.co.uk",
   "dependencies": {
     "classnames": "^2.2.6",
