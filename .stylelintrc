@@ -1,4 +1,5 @@
 {
+  "configBasedir": ".",
   "enabled": true,
   "extends": [
     "./node_modules/prettier-stylelint/config.js",
