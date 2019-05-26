@@ -9,7 +9,7 @@ module.exports = {
     '!src/vendor/*.js',
     'src/**/*.js',
   ],
-  coverageReporters: ['html', 'text', 'text-summary'],
+  coverageReporters: ['lcov', 'text', 'text-summary'],
   globals: {
     __PATH_PREFIX__: ``,
   },
