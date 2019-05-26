@@ -2,21 +2,14 @@
 engines:
   eslint:
     enabled: false
-    channel: "eslint-3"
-    config:
-      ignore_warnings: true
-  scss-lint:
+  stylelint:
     enabled: true
 exclude_paths: []
 exclude_patterns:
   - "src/*.js"
+  - "src/**/*.js.snap"
+  - "src/**/*.test.js"
 ratings:
   paths:
-    - "**.inc"
     - "**.js"
-    - "**.jsx"
-    - "**.module"
-    - "**.php"
-    - "**.py"
-    - "**.rb"
     - "**.scss"
