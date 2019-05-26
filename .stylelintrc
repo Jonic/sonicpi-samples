@@ -2,7 +2,7 @@
   "configBasedir": ".",
   "enabled": true,
   "extends": [
-    "./node_modules/prettier-stylelint/config.js",
+    "prettier-stylelint/config.js",
     "stylelint-config-standard",
     "stylelint-config-recommended-scss"
   ],
