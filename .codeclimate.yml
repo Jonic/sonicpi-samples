@@ -13,4 +13,4 @@ plugins:
   eslint:
     enabled: false
   stylelint:
-    enabled: true
+    enabled: false
