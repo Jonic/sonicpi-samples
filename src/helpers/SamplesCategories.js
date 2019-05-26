@@ -1,4 +1,4 @@
-import samples from '../_config/samples'
+import samples from 'config/samples'
 
 const getSamplesForCategory = category => {
   if (category === 'all') {

@@ -1,37 +1,29 @@
-import './CategorySelector.css'
-import PropTypes from 'prop-types'
-import React from 'react'
+import './CategorySelector.scss'
 
-import Select from '../../../UI/Select/Select'
+import React, { useContext } from 'react'
 
-const CategorySelector = (props) => {
-  const {
-    categories,
-    categorySelectorChangeHandler,
-    currentCategory,
-    isLoading,
-  } = props
+import AppContext from 'contexts/App'
+import PlayerContext from 'contexts/Player'
+import Select from 'components/UI/Select/Select'
+
+const CategorySelector = () => {
+  const { isLoading } = useContext(AppContext)
+  const { categories, currentCategory, setCurrentCategory } = useContext(
+    PlayerContext,
+  )
 
   return (
     <div className="c-category-selector">
-      Category Selector:
-      {' '}
+      Category Selector:{' '}
       <Select
         className="c-category-selector__select"
         disabled={isLoading}
-        onChange={categorySelectorChangeHandler}
+        onChange={value => setCurrentCategory(value)}
         options={categories}
         value={currentCategory}
       />
     </div>
   )
-}
-
-CategorySelector.propTypes = {
-  categories:                    PropTypes.array.isRequired,
-  categorySelectorChangeHandler: PropTypes.func.isRequired,
-  currentCategory:               PropTypes.string.isRequired,
-  isLoading:                     PropTypes.bool.isRequired,
 }
 
 export default CategorySelector

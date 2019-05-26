@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PlayStop /> Renders... matches its snapshot 1`] = `
+exports[`<PlayStop /> Renders matches its snapshot 1`] = `
 <div
   className="c-play-stop"
 >
   <button
     className="c-play-stop__button"
-    disabled={false}
+    disabled={true}
     onClick={[Function]}
   >
     Play

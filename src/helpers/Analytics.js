@@ -1,6 +1,5 @@
 import ReactGA from 'react-ga'
-
-import config from '../_config/analytics'
+import config from 'config/analytics'
 
 const init = () => {
   console.log('Analytics#init') // eslint-disable-line no-console
@@ -18,8 +17,8 @@ const trackPageView = () => {
 const trackPlay = sample => {
   const event = {
     category: 'Audio',
-    action:   'Sample Played',
-    label:    sample,
+    action: 'Sample Played',
+    label: sample,
   }
 
   console.log('Analytics#trackPlay', event) // eslint-disable-line no-console

@@ -1,42 +1,67 @@
 @import '../styles/component-helper';
 
 @keyframes bg-color-fade {
-  0%, 100% { background-color: $color-primary-navy;      }
-  12.5%    { background-color: $color-primary-blue;      }
-  25%      { background-color: $color-primary-turquoise; }
-  37.5%    { background-color: $color-primary-green;     }
-  50%      { background-color: $color-primary-yellow;    }
-  62.5%    { background-color: $color-primary-orange;    }
-  75%      { background-color: $color-primary-red;       }
-  87.5%    { background-color: $color-primary-violet;    }
+  0%,
+  100% {
+    background-color: $color-primary-navy;
+  }
+
+  12.5% {
+    background-color: $color-primary-blue;
+  }
+
+  25% {
+    background-color: $color-primary-turquoise;
+  }
+
+  37.5% {
+    background-color: $color-primary-green;
+  }
+
+  50% {
+    background-color: $color-primary-yellow;
+  }
+
+  62.5% {
+    background-color: $color-primary-orange;
+  }
+
+  75% {
+    background-color: $color-primary-red;
+  }
+
+  87.5% {
+    background-color: $color-primary-violet;
+  }
 }
 
-$app-background-color:           $color-primary-navy;
-$app-color:                      $color-white;
-$app-transition-duration:        $transition-duration-extremely-long;
+$app-background-color: $color-primary-navy;
+$app-color: $color-white;
+$app-transition-duration: $transition-duration-extremely-long;
 $app-transition-timing-function: $transition-timing-eased;
-$app-padding:                    3vw;
+$app-padding: 3vw;
 
 .c-app {
-  animation-duration:        $app-transition-duration;
-  animation-fill-mode:       forwards;
+  animation-duration: $app-transition-duration;
+  animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-  animation-name:            bg-color-fade;
+  animation-name: bg-color-fade;
   animation-timing-function: $app-transition-timing-function;
-  background-color:          $app-background-color;
-  color:                     $app-color;
-  height:                    100vh;
-  padding:                   $app-padding;
-  width:                     100vw;
+  background-color: $app-background-color;
+  color: $app-color;
+  height: 100%;
+  min-height: 100vh;
+  padding: $app-padding;
+  width: 100%;
 }
 
-$app-title-font-size:   10vw;
+$app-title-font-size: 10vw;
 $app-title-line-height: 1.5;
 
 .c-app__title {
   @include iota-type($app-title-font-size, $app-title-line-height);
 
-  font-style:  italic;
+  font-style: italic;
   font-weight: $font-weight-light;
-  text-align:  center;
+  text-align: center;
 }

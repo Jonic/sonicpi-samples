@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Select /> Renders... matches its snapshot 1`] = `
+exports[`<Select /> Renders matches its snapshot 1`] = `
 <select
   className="c-select"
   disabled={false}

@@ -1,0 +1,6 @@
+{
+  "source": {
+    "flac": "audio/flac",
+    "mp3": "audio/mp3"
+  }
+}

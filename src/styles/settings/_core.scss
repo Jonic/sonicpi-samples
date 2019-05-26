@@ -1,12 +1,12 @@
-$iota-global-columns:              2, 3, 6, 12;
-$iota-global-objects-namespace:    'o-';
-$iota-global-utilities-namespace:  'u-';
+$iota-global-columns: 2, 3, 6, 12;
+$iota-global-objects-namespace: 'o-';
+$iota-global-utilities-namespace: 'u-';
 $iota-global-components-namespace: 'c-';
-$iota-global-gutter-default:       $grid-gutter-base;
-$iota-global-flex:                 true;
-$iota-global-rtl:                  false;
-$iota-global-breakpoints:          $breakpoints;
+$iota-global-gutter-default: $grid-gutter-base;
+$iota-global-flex: true;
+$iota-global-rtl: false;
+$iota-global-breakpoints: $breakpoints;
 $iota-global-breakpoint-separator: \@;
-$iota-global-delimiter:            \/;
+$iota-global-delimiter: \/;
 
 @import 'node_modules/iotacss/settings/core';

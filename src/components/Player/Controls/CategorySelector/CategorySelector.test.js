@@ -1,29 +1,23 @@
-import React from 'react'
-import { shallow } from 'enzyme'
 import CategorySelector from './CategorySelector'
+import PlayerContext from 'contexts/Player'
 
-const categories = []
-const categorySelectorChangeHandler = jest.fn()
-const currentCategory = ''
-const isLoading = false
+const contextValue = {
+  categories: [],
+  currentCategory: '',
+  isLoading: false,
+  setCurrentCategory: jest.fn(),
+}
 
-let wrapper
+let wrapper = mount(
+  <PlayerContext.Provider value={contextValue}>
+    <CategorySelector />,
+  </PlayerContext.Provider>,
+)
 
 describe('<CategorySelector />', () => {
-  beforeEach(() => {
-    wrapper = shallow(
-      <CategorySelector
-        categories={categories}
-        categorySelectorChangeHandler={categorySelectorChangeHandler}
-        currentCategory={currentCategory}
-        isLoading={isLoading}
-      />
-    )
-  })
-
-  describe('Renders...', () => {
+  describe('Renders', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-category-selector')).toBePresent()
+      expect(wrapper.find('.c-category-selector')).toExist()
     })
 
     it('matches its snapshot', () => {

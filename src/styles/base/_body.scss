@@ -2,14 +2,14 @@ body {
   @include iota-type($type-base);
 
   background-color: $color-ui-grey-lightest;
-  color:            $color-ui-black;
-  // Disable font-display check as it's still in draft
-  // https://drafts.csswg.org/css-fonts-4/#font-display-desc
-  font-display:     swap; // scss-lint:disable PropertySpelling
-  font-family:      $font-family-serif;
-  font-weight:      $font-weight-light;
-  padding:          constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
-  position:         relative;
-  text-rendering:   optimizeLegibility;
+  color: $color-ui-black;
+  font-display: swap;
+  font-family: $font-family-serif;
+  font-weight: $font-weight-light;
+  padding:
+    constant(safe-area-inset-top) constant(safe-area-inset-right)
+    constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+  position: relative;
+  text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
 }

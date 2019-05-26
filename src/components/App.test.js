@@ -1,21 +1,17 @@
-jest.mock('../helpers/Analytics')
-
-import React from 'react'
-import { shallow } from 'enzyme'
 import App from './App'
+
+jest.mock('helpers/Analytics')
 
 let wrapper
 
 describe('<App />', () => {
   beforeEach(() => {
-    wrapper = shallow(
-      <App />
-    )
+    wrapper = shallow(<App />)
   })
 
-  describe('Renders...', () => {
+  describe('Renders', () => {
     it('without crashing', () => {
-      expect(wrapper.find('.c-app')).toBePresent()
+      expect(wrapper.find('.c-app')).toExist()
     })
 
     it('matches its snapshot', () => {

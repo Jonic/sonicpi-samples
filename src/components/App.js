@@ -1,47 +1,29 @@
-import './App.css'
-import { trackPageView } from '../helpers/Analytics'
+import './App.scss'
+
+import AppContext, { AppContextProvider } from 'contexts/App'
+import React, { useContext } from 'react'
+
 import Player from './Player/Player'
-import React, { Component } from 'react'
+import Visualizer from './Visualizer/Visualizer'
+import classnames from 'classnames'
 
-class App extends Component {
-  constructor() {
-    super()
+const App = () => {
+  const { isLoading } = useContext(AppContext)
+  const cAppClassNames = classnames(['c-app', isLoading && 'c-app--is-loading'])
 
-    this.state = {
-      isLoading: false,
-    }
-  }
+  return (
+    <AppContextProvider>
+      <main className={cAppClassNames}>
+        <h1 className="c-app__title">Sonic Pi Samples</h1>
 
-  componentDidMount() {
-    trackPageView()
-  }
+        <section className="c-app__player">
+          <Player />
+        </section>
+      </main>
 
-  toggleIsLoading = () => {
-    let newState = !this.state.isLoading
-    this.updateIsLoading(newState)
-  }
-
-  updateIsLoading = (newState) => {
-    this.setState({
-      isLoading: newState,
-    })
-  }
-
-  render() {
-    return (
-      <div className="c-app">
-        <h1 className="c-app__title">
-          Sonic Pi Samples
-        </h1>
-        {' '}
-        <Player
-          isLoading={this.state.isLoading}
-          toggleIsLoading={this.toggleIsLoading}
-          updateIsLoading={this.updateIsLoading}
-        />
-      </div>
-    )
-  }
+      <Visualizer />
+    </AppContextProvider>
+  )
 }
 
 export default App

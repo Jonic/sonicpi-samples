@@ -1,17 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CategorySelector /> Renders... matches its snapshot 1`] = `
-<div
-  className="c-category-selector"
->
-  Category Selector:
-   
-  <Select
-    className="c-category-selector__select"
-    disabled={false}
-    onChange={[Function]}
-    options={Array []}
-    value=""
-  />
-</div>
+exports[`<CategorySelector /> Renders matches its snapshot 1`] = `
+Array [
+  <CategorySelector>
+    <div
+      className="c-category-selector"
+    >
+      Category Selector:
+       
+      <Select
+        className="c-category-selector__select"
+        disabled={true}
+        onChange={[Function]}
+        options={Array []}
+        value=""
+      >
+        <select
+          className="c-select c-category-selector__select"
+          disabled={true}
+          onChange={[Function]}
+          value=""
+        />
+      </Select>
+    </div>
+  </CategorySelector>,
+  ",",
+]
 `;

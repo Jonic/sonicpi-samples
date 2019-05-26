@@ -1,15 +1,17 @@
-$box-shadow-color:  rgba($color-black, .25);
+$box-shadow-color: rgba($color-black, 0.25);
 
-$box-shadow-offset: .1rem;
-$box-shadow-blur:   .3rem;
+$box-shadow-offset: 0.1rem;
+$box-shadow-blur: 0.3rem;
 
-$box-shadow-all:    0                     0                     $box-shadow-blur 0;
-$box-shadow-b-edge: 0                     $box-shadow-offset    $box-shadow-blur (-$box-shadow-offset);
-$box-shadow-l-edge: $box-shadow-offset    0                     $box-shadow-blur (-$box-shadow-offset);
-$box-shadow-r-edge: (-$box-shadow-offset) 0                     $box-shadow-blur (-$box-shadow-offset);
-$box-shadow-t-edge: 0                     (-$box-shadow-offset) $box-shadow-blur (-$box-shadow-offset);
+$box-shadow-all: 0 0 $box-shadow-blur 0;
+$box-shadow-b-edge: 0 $box-shadow-offset $box-shadow-blur (-$box-shadow-offset);
+$box-shadow-l-edge: $box-shadow-offset 0 $box-shadow-blur (-$box-shadow-offset);
+$box-shadow-r-edge: (-$box-shadow-offset) 0 $box-shadow-blur
+  (-$box-shadow-offset);
+$box-shadow-t-edge: 0 (-$box-shadow-offset) $box-shadow-blur
+  (-$box-shadow-offset);
 
-$box-shadow:   $box-shadow-all    $box-shadow-color;
+$box-shadow: $box-shadow-all $box-shadow-color;
 $box-shadow-b: $box-shadow-b-edge $box-shadow-color;
 $box-shadow-l: $box-shadow-l-edge $box-shadow-color;
 $box-shadow-r: $box-shadow-r-edge $box-shadow-color;
