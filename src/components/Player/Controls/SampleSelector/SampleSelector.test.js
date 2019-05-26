@@ -1,25 +1,21 @@
+import PlayerContext from 'contexts/Player'
 import SampleSelector from './SampleSelector'
 
-const currentSample = ''
-const filteredSamples = []
-const isLoading = false
-const sampleSelectorChangeHandler = jest.fn()
+const contextValue = {
+  currentSample: '',
+  filteredSamples: [],
+  isLoading: false,
+  setCurrentSample: jest.fn(),
+}
 
-let wrapper
+let wrapper = mount(
+  <PlayerContext.Provider value={contextValue}>
+    <SampleSelector />,
+  </PlayerContext.Provider>,
+)
 
 describe('<SampleSelector />', () => {
-  beforeEach(() => {
-    wrapper = shallow(
-      <SampleSelector
-        currentSample={currentSample}
-        filteredSamples={filteredSamples}
-        isLoading={isLoading}
-        sampleSelectorChangeHandler={sampleSelectorChangeHandler}
-      />,
-    )
-  })
-
-  describe('Renders...', () => {
+  describe('Renders', () => {
     it('without crashing', () => {
       expect(wrapper.find('.c-sample-selector')).toExist()
     })

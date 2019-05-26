@@ -1,3 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Debug /> Renders... matches its snapshot 1`] = `undefined`;
+exports[`<Debug /> Renders matches its snapshot 1`] = `
+Array [
+  <Debug>
+    <div
+      className="c-debug"
+    >
+      <ul
+        className="c-debug__list"
+      >
+        <li
+          className="c-debug__list-item"
+        >
+          currentCategory: 
+        </li>
+        <li
+          className="c-debug__list-item"
+        >
+          currentSample: 
+        </li>
+        <li
+          className="c-debug__list-item"
+        >
+          isLooping: 
+          false
+        </li>
+        <li
+          className="c-debug__list-item"
+        >
+          isPlaying: 
+          true
+        </li>
+      </ul>
+    </div>
+  </Debug>,
+  ",",
+]
+`;

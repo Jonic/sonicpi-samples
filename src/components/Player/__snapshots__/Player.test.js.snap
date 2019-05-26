@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Player /> Renders... matches its snapshot 1`] = `
+exports[`<Player /> Renders matches its snapshot 1`] = `
 <PlayerContextProvider>
   <div
     className="c-player"

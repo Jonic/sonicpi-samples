@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Audio /> Renders matches its snapshot 1`] = `
+<audio
+  className="c-audio"
+  onEnded={[Function]}
+  onPlay={[Function]}
+  src={null}
+/>
+`;

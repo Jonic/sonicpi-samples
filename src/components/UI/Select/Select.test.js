@@ -1,25 +1,11 @@
 import Select from './Select'
 
-const options = []
-const onChange = jest.fn()
-const value = ''
-const disabled = false
-
-let wrapper
+let wrapper = shallow(
+  <Select disabled={false} onChange={jest.fn()} options={[]} value={''} />,
+)
 
 describe('<Select />', () => {
-  beforeEach(() => {
-    wrapper = shallow(
-      <Select
-        options={options}
-        onChange={onChange}
-        value={value}
-        disabled={disabled}
-      />,
-    )
-  })
-
-  describe('Renders...', () => {
+  describe('Renders', () => {
     it('without crashing', () => {
       expect(wrapper.find('.c-select')).toExist()
     })

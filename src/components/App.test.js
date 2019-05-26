@@ -1,6 +1,6 @@
 import App from './App'
 
-jest.mock('../helpers/Analytics')
+jest.mock('helpers/Analytics')
 
 let wrapper
 
@@ -9,7 +9,7 @@ describe('<App />', () => {
     wrapper = shallow(<App />)
   })
 
-  describe('Renders...', () => {
+  describe('Renders', () => {
     it('without crashing', () => {
       expect(wrapper.find('.c-app')).toExist()
     })
