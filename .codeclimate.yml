@@ -1,15 +1,11 @@
 ---
-engines:
+version: 2
+plugins:
   eslint:
     enabled: false
   stylelint:
     enabled: true
-exclude_paths: []
 exclude_patterns:
   - "src/*.js"
   - "src/**/*.js.snap"
   - "src/**/*.test.js"
-ratings:
-  paths:
-    - "**.js"
-    - "**.scss"
