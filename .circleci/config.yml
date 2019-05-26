@@ -1,12 +1,20 @@
-dependencies:
-  post:
-    - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-    - chmod +x ./cc-test-reporter
-machine:
-  node:
-    version: 10.15.3
-test:
-  override:
-    - npm test -- --coverage; ./cc-test-reporter after-build --exit-code $?
-  pre:
-    - ./cc-test-reporter before-build
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.15.3
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package-lock.json" }}
+      - run: npm install --loglevel=error
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Run tests
+          command: |
+            npm run test-coverage
