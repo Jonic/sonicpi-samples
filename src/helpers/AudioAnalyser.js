@@ -1,7 +1,7 @@
 let analyser
 let frequencyData
 
-export const AudioAnalyserHelperInit = (audioElement, setVisData) => {
+export const AudioAnalyserCreateContext = () => {
   let context
 
   try {
@@ -9,16 +9,28 @@ export const AudioAnalyserHelperInit = (audioElement, setVisData) => {
   } catch (e) {
     // eslint-disable-next-line no-console
     console.log('No Web Audio API support')
+    return null
+  }
+
+  return context
+}
+
+export const AudioAnalyserHelperInit = (
+  audioContext,
+  audioElement,
+  setVisData,
+) => {
+  if (!audioContext) {
     return
   }
 
-  const elementSource = context.createMediaElementSource(audioElement)
+  const elementSource = audioContext.createMediaElementSource(audioElement)
 
-  analyser = context.createAnalyser()
+  analyser = audioContext.createAnalyser()
   analyser.fftSize = 128
 
   elementSource.connect(analyser)
-  elementSource.connect(context.destination)
+  elementSource.connect(audioContext.destination)
 
   window.requestAnimationFrame(() => {
     AudioAnalyserHelperSendData(setVisData)
@@ -36,6 +48,7 @@ export const AudioAnalyserHelperSendData = setVisData => {
 }
 
 const AudioAnalyserHelper = {
+  AudioAnalyserCreateContext,
   AudioAnalyserHelperInit,
   AudioAnalyserHelperSendData,
 }

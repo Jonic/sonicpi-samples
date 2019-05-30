@@ -11,6 +11,8 @@ const PlayerContextProvider = ({ children }) => {
   const [samples, setSamples] = useState(samplesConfig)
   const [categories, setCategories] = useState(categoriesConfig)
 
+  const [audioContext, setAudioContext] = useState(null)
+
   const [currentCategory, setCurrentCategory] = useState(categories[0])
   const [currentSample, setCurrentSample] = useState(samples[0])
   const [filteredSamples, setFilteredSamples] = useState(
@@ -34,6 +36,7 @@ const PlayerContextProvider = ({ children }) => {
   }, [currentSample])
 
   const contextValue = {
+    audioContext,
     categories,
     currentCategory,
     currentSample,
@@ -41,6 +44,7 @@ const PlayerContextProvider = ({ children }) => {
     isLooping,
     isPlaying,
     samples,
+    setAudioContext,
     setCategories,
     setCurrentCategory,
     setCurrentSample,

@@ -10,17 +10,21 @@ import { trackPlay } from 'helpers/Analytics'
 
 const Audio = () => {
   const { setIsLoading, setVisData } = useContext(AppContext)
-  const { currentSample, isLooping, isPlaying, setIsPlaying } = useContext(
-    PlayerContext,
-  )
+  const {
+    audioContext,
+    currentSample,
+    isLooping,
+    isPlaying,
+    setIsPlaying,
+  } = useContext(PlayerContext)
 
   const audioElement = useRef(null)
   const [audioSource, setAudioSource] = useState(null)
 
   useEffect(() => {
     setIsLoading(false)
-    AudioAnalyserHelperInit(audioElement.current, setVisData)
-  }, [audioElement, setIsLoading, setVisData])
+    AudioAnalyserHelperInit(audioContext, audioElement.current, setVisData)
+  }, [audioContext, audioElement, setIsLoading, setVisData])
 
   useEffect(() => {
     setAudioSource(
