@@ -23,6 +23,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
+    "develop": "netlify dev -c 'react-scripts start'",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "jest --notify --runInBand --watchAll",
