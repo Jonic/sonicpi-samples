@@ -54,7 +54,7 @@
     "jest-enzyme": "7.0.2",
     "jest-plugin-context": "2.9.0",
     "lint-staged": "8.1.7",
-    "prettier": "1.17.1",
+    "prettier": "1.19.1",
     "prettier-package-json": "2.1.0",
     "prettier-stylelint": "0.4.2",
     "stylelint": "10.0.1",
