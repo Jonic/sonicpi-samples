@@ -50,7 +50,7 @@
     "jest": "24.8.0",
     "jest-environment-enzyme": "7.0.2",
     "jest-environment-jsdom": "24.8.0",
-    "jest-environment-jsdom-global": "1.2.0",
+    "jest-environment-jsdom-global": "1.2.1",
     "jest-enzyme": "7.0.2",
     "jest-plugin-context": "2.9.0",
     "lint-staged": "8.1.7",
